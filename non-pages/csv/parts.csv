@@ -1,1 +1,27 @@
-Item/Part,Cost
+header,Item/Part,Cost
+header,Tubes:,Price varies on size & valve type
+,700c/27in Presta Valve,$4.00
+,700c/27in Schrader Valve,$3.00
+,29in Presta Valve,$5.00
+,26in Schrader Valve,$3.00
+,26in Presta Valve,$4.00
+header,Cables/Housing:
+,Brake Cable,$2.00
+,Shift Cable,$2.00
+,Shift Housing, $1.00/foot
+,Brake Housing,$1.00/foot
+header,Accessories:
+,Grips,$5.00/set (used $2)
+,Helmet,New: $20.00
+,Lights,New: $6.00
+,Seats,New: $3.00-$5.00
+,Pedals,New: $5.00 Used: $2.00
+,Brake Calipers,Used: $3.00/set
+,Cranks,Used: $5.00
+,Brake Levels,Used: $2.00/lever
+,Handlebars,Used: $5.00-$8.00
+,Shifters,Used: $5.00-$8.00
+,Stems,Used: $3.00-$5.00
+,Fender,$10.00
+,Chain,$10.00
+,Tires,$10.00-$15.00
