@@ -89,26 +89,23 @@
         $tagLine = " - UVM Bikes - Free Campus Bike Shop";
         ?>
 <title><?php echo $navTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
-    <?php
-        //didn't use yet
-        $isCurrentPage = false;
-        
+    <?php        
         //$activePageArray = array( array("assignment7", ''), array("prices-services", ''), array("hours", ''), array("classes-events", ''), array("contact", ''), array("about", '') );
         //$activePageArray = array( array("assignment7" => ''), array("prices-services" => ''), array("hours" => ''), array("classes-events" => ''), array("contact" => ''), array("about" => '') );
+        //
         //IMPORTANT "assignment7" is the root directory
-        $pageArray = array( "assignment7", "prices-services" , "hours" , "classes-events" , "contact" , "about");
-        $activePageArray = array();
-        //$keys = array();    //$pageArray[0], $pageArray[1], $pageArray[2], $pageArray[3], $pageArray[4], $pageArray[5]
+        $pageArray = array( "assignment7", "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
+        $activePageArray = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
 
-        $activePageArray = array_fill_keys($pageArray, '');
+        $activePageArray = array_fill_keys($pageArray, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
         //echo print_r($activePageArray);
 //        for($i = 0; $i < count($pageArray); $i++){
 //            $activePageArray[$i] = $pageArray[0] => '';
 //        }
         //$activePageArray = array( $pageArray[0] => '', $pageArray[1] => '', $pageArray[2] => '', $pageArray[3] => '', $pageArray[4] => '', $pageArray[5] => '' );
-        for($i = 0; $i < count($pageArray); $i++){
-            if($containing_folder == $pageArray[$i]){
-                $activePageArray[$containing_folder]= "activePage";
+        for($i = 0; $i < count($pageArray); $i++){      //loop through the page array
+            if($containing_folder == $pageArray[$i]){   //if the current containing folder (the active page) = the key stored in the page Array
+                $activePageArray[$containing_folder]= "activePage";     //print "activePage" in the $activePageArray, at the index of "containing_folder". It's associative, so $activePageArray must be accessed via a key, in this case it's the $containing_folder (or current page)
             }
         }
 //        for($i = 0; $i < count($activePageArray); $i++){
@@ -116,7 +113,6 @@
 //                $activePageArray[$i][1] = "activePage";
 //            }
 //        }
-        $activePage = 0;
     ?>
 
     <link rel="icon" type="image/png" href="<?php echo $upFolderPlaceholder ?>images/0components/favicon.png">
