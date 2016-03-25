@@ -10,6 +10,8 @@
         <![endif]-->
         
         <?php
+//=============IMPORTANT "assignment7" is the root directory==========================
+        
         //Magical code to display errors
         //error_reporting(E_ALL);           //longer version not needed?
         //ini_set('display_errors', '1');
@@ -93,8 +95,17 @@
         
         //$activePageArray = array( array("assignment7", ''), array("prices-services", ''), array("hours", ''), array("classes-events", ''), array("contact", ''), array("about", '') );
         //$activePageArray = array( array("assignment7" => ''), array("prices-services" => ''), array("hours" => ''), array("classes-events" => ''), array("contact" => ''), array("about" => '') );
+        //IMPORTANT "assignment7" is the root directory
         $pageArray = array( "assignment7", "prices-services" , "hours" , "classes-events" , "contact" , "about");
-        $activePageArray = array( "assignment7" => '', "prices-services" => '', "hours" => '', "classes-events" => '', "contact" => '', "about" => '' );
+        $activePageArray = array();
+        //$keys = array();    //$pageArray[0], $pageArray[1], $pageArray[2], $pageArray[3], $pageArray[4], $pageArray[5]
+
+        $activePageArray = array_fill_keys($pageArray, '');
+        //echo print_r($activePageArray);
+//        for($i = 0; $i < count($pageArray); $i++){
+//            $activePageArray[$i] = $pageArray[0] => '';
+//        }
+        //$activePageArray = array( $pageArray[0] => '', $pageArray[1] => '', $pageArray[2] => '', $pageArray[3] => '', $pageArray[4] => '', $pageArray[5] => '' );
         for($i = 0; $i < count($pageArray); $i++){
             if($containing_folder == $pageArray[$i]){
                 $activePageArray[$containing_folder]= "activePage";

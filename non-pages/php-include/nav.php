@@ -5,9 +5,7 @@
         <input type="checkbox" id="drop" />
         <ul class="menu">
             <!-- IMPORTANT $containing_folder == "assignment7"   must match the base folder of the site -->
-            
-            <li><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; echo 'class="'.$activePageArray[$containing_folder].'"'; ?>>Home</a></li>
-            <li><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; if ($containing_folder == "assignment7") echo 'class="activePage"'; ?>>Home</a></li>
+            <li><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; echo 'class="'.$activePageArray['assignment7'].'"'; ?>>Home</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'prices-services/index.php"'; if ($containing_folder == "prices-services") echo 'class="activePage"'; ?>>Prices / Services</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'hours/index.php"'; if ($containing_folder == "hours") echo 'class="activePage"'; ?>>Hours</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'classes-events/index.php"'; if ($containing_folder == "classes-events") echo 'class="activePage"'; ?>>Classes / Events</a></li>
