@@ -78,9 +78,9 @@
         
         
         //This sets the title tag based on the current page (and the folder it's located inside)
-            //potential addition: replace _ (underscore with a space for multiple-word pages WITHOUT a slash)
         $navTitle = $containing_folder;                     //initially set to the entire fontaining folder
         $navTitle = str_replace("-" , " / ", $navTitle);    //replace dashes with slashes and spaces
+        $navTitle = str_replace("_" , " ", $navTitle);      //replace underscores with spaces (multi-word title)
         $navTitle = ucwords($navTitle);                     //capitolize 1st letter of each word
         if ($folderCountAdjusted == 0) {    //if it's the homepage, hardcode it instead of the base folder where the site's located
             $navTitle = "Home";

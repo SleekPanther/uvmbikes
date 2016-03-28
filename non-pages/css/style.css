@@ -1,14 +1,31 @@
-/*media queries on small screen to fix columns & mkae full width */
+/*------------------------- general syles & global positioning */
+body {
+  margin: 0;
+  font-size: 1.3em;
+  background: grey;
+}
+/*All horizontal sections get some class or id like "mainContent" or "slideshow. Background color is set here
+inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
+for columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
+colContainer is like a row, & inside 2 divs get classes "twoCol". They float left/right on big screens then span the entire width on small screens
+using a min-width approach for media queries, I start with the smallest screens, then @ a certain size, style for the larger screen  */
 .twoCol {
+  /*using a min-width approach it starts off 100% & is changed later */
   width: 100%;
+}
+.twoCol article {
+  padding: 1em 1em 0 0;
 }
 .widthContainer {
   width: 100%;
+  /* width is changed later for large screens */
   margin: 0 auto;
-  padding: 10px;
+  padding: 1px 0;
+  /* top & bottom must have some padding, to fix header accidentaly showing body */
   transition: 1.5s;
   /*transition the width to 100% later on */
 }
+/*media queries on small screen to fix columns & mkae full width */
 @media (min-width: 800px) {
   /* these are actually what you see on big screens */
   .twoCol {
@@ -23,16 +40,15 @@
   /* this is important, so that multiple columns don't all go right */
 }
 .colContainer > .twoCol:nth-child(1) {
+  /* make the 1st column float left */
   float: left;
 }
 .colContainer > .twoCol:nth-child(2) {
+  /* make the 2nd column float left */
   float: right;
 }
-body {
-  margin: 0;
-  font-size: 1.3em;
-  background: grey;
-}
+/*------------------------- end positioning/layout section */
+/*-------------------------color of page secions */
 .todayHours {
   background: lightBlue;
 }
@@ -53,3 +69,4 @@ footer {
   background: lightYellow;
   font-size: .8em;
 }
+/*-------------------------END color of page secions */

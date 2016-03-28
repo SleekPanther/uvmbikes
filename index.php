@@ -2,7 +2,7 @@
 
 <section class="mainContent">
     <div class="widthContainer">
-        <h1>Noah Patullo CS142</h1>
+        <h1><?php echo $navTitle; ?> - UVM Bikes</h1>
         <?php
         echo $upFolderPlaceholder;
         echo "<br>" . print_r($activePageArray);
@@ -10,22 +10,30 @@
         ?>
 
         <div class="colContainer">
-            <div class="twoCol">LEFT<br>  
-                myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d sssssssssssssssssssssssss</div>
-            <div class="twoCol">right<br>myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d</div>
+            <div class="twoCol">
+                <article>LEFT<br>  
+                    myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d sssssssssssssssssssssssss
+                </article>
+            </div>
+            <div class="twoCol">
+                <article>RIGHT<br>  
+                    lkjasfd lkjasdhjasdlkj asdgkljagslkjh asdglkjahsdglkjhsadglkjhas lk kjhgsadlkj aslkjhgasljg as lkjasfd lkjasdhjasdlkj asdgkljagslkjh asdglkjahsdglkjhsadglkjhas lk kjhgsadlkj aslkjhgasljg aslkjasfd lkja
+                </article>
+            </div>
+        </div>
+        <div class="colContainer">
+            <div class="twoCol">
+                <article>LEFT<br>  
+                    myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d sssssssssssssssssssssssss
+                </article>
+            </div>
+            <div class="twoCol">
+                <article>RIGHT<br>  
+                    lkjasfd lkjasdhjasdlkj asdgkljagslkjh asdglkjahsdglkjhsadglkjhas lk kjhgsadlkj aslkjhgasljg as lkjasfd lkjasdhjasdlkj asdgkljagslkjh asdglkjahsdglkjhsadglkjhas lk kjhgsadlkj aslkjhgasljg aslkjasfd lkja
+                </article>
+            </div>
+        </div>
 
-        </div>
-        <div class="colContainer">
-            <div class="twoCol">LEFT<br>  
-                myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d sssssssssssssssssssssssss</div>
-            <div class="twoCol">right<br>myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d</div>
-        </div>
-        <div class="colContainer">
-            <div class="twoCol">LEFT<br>  
-                myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d sssssssssssssssssssssssss</div>
-            <div class="twoCol">right<br>myasdf;lkas gd;lkas dg;ndsf;jg a;lkngf ;daf;lknad fg;lk adsjfngksdfjbg skhb dsfghbsdfgkjhbs dfkjhbsdfgkjhbsdfgkjhb sdf hlkdsfgk jkhbhgb gfhfg fghbgf d</div>
-        </div>
-        
         &nbsp;<!-- need some content, or the box is 0px tall (all floated) -->
     </div>
 </section>
