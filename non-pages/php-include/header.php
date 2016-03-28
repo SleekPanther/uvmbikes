@@ -1,14 +1,14 @@
 <!-- header -->
 <?php
-$fileObject = fopen($upFolderPlaceholder . "non-pages/csv/hours.csv", "r");
+$hoursFile = fopen($upFolderPlaceholder . "non-pages/csv/hours.csv", "r");
 
-while (!feof($fileObject)) {               //while not "end of file(eof)"
-    $file[] = fgetcsv($fileObject);     //add rows to $file array. It becomed a  2D array
+while (!feof($hoursFile)) {               //while not "end of file(eof)"
+    $hoursFileContents[] = fgetcsv($hoursFile);     //add rows to $hoursFileContents array. It becomed a  2D array
 }
-fclose($fileObject);      //closes the file
+fclose($hoursFile);      //closes the file
 
-$daysRow = $file[0];        //get the 1st row of data to compare to current date
-$hoursRow = $file[1];       //store the 2nd row with hours in a separate array (easier to understand)
+$daysRow = $hoursFileContents[0];        //get the 1st row of data to compare to current date
+$hoursRow = $hoursFileContents[1];       //store the 2nd row with hours in a separate array (easier to understand)
 $today = getdate()['weekday'];      //returns an actual word of the day, e.g. Sunday or Monday
 for($i =0; $i< count($daysRow); $i++){      //loop through the days array
     if( $daysRow[$i] == $today){        //compare the current index in the days array to the current day ($today)
@@ -20,7 +20,9 @@ for($i =0; $i< count($daysRow); $i++){      //loop through the days array
 <header>
     <div class="todayHours">
         <section class="widthContainer">
-            Hours Today: <?php echo $todayHours; ?> | <a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">See all hours</a>
+            <div>Hours Today: <?php echo $todayHours; ?> | <a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">See all hours</a></div>
+            &nbsp;<!-- need some content, or height=0 -->
+            <div class='tinyLocation'>Hills Building Room 101</div>
         </section>
     </div>
 

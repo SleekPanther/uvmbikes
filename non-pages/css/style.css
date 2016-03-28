@@ -4,6 +4,17 @@ body {
   font-size: 1.3em;
   background: grey;
 }
+h1 {
+  font-size: 1.6em;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 0;
+}
+p {
+  margin: .5em 0;
+}
 /*All horizontal sections get some class or id like "mainContent" or "slideshow. Background color is set here
 inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
 for columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
@@ -20,7 +31,7 @@ using a min-width approach for media queries, I start with the smallest screens,
   width: 100%;
   /* width is changed later for large screens */
   margin: 0 auto;
-  padding: 1px 0;
+  padding: 10px 0;
   /* top & bottom must have some padding, to fix header accidentaly showing body */
   transition: 1.5s;
   /*transition the width to 100% later on */
@@ -47,6 +58,16 @@ using a min-width approach for media queries, I start with the smallest screens,
   /* make the 2nd column float left */
   float: right;
 }
+.todayHours .widthContainer {
+  position: relative;
+}
+.todayHours .widthContainer div {
+  position: absolute;
+}
+.tinyLocation {
+  top: 10px;
+  right: 0;
+}
 /*------------------------- end positioning/layout section */
 /*-------------------------color of page secions */
 .todayHours {
@@ -70,3 +91,13 @@ footer {
   font-size: .8em;
 }
 /*-------------------------END color of page secions */
+/*------------------Home page --------------------------*/
+iframe {
+  border: 0;
+  display: block;
+}
+#index .map {
+  width: 100%;
+  height: 20em;
+}
+/*------------------END Home page --------------------------*/
