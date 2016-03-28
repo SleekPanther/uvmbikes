@@ -22,11 +22,12 @@ p{
 }
 
 /*All horizontal sections get some class or id like "mainContent" or "slideshow. Background color is set here
-inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
-for columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
+Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
+For columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
 colContainer is like a row, & inside 2 divs get classes "twoCol". They float left/right on big screens then span the entire width on small screens
-using a min-width approach for media queries, I start with the smallest screens, then @ a certain size, style for the larger screen  
-Since columns are floated elements, MUST ADD &nbsp; inside the "widthContainer" AT THE END*/
+colContainer is optional when only working with one "row" (like in the footer where there are just 2 columns)
+Using a min-width approach for media queries, I start with the smallest screens, then @ a certain size, style for the larger screen  
+The sections that contain widthContainers MUST HAVE overflow: auto or hidden (this is because the twoCol floated elements take up no height)*/
 
 //width & positioning variables
 .twoCol {   /*using a min-width approach it starts off 100% & is changed later */
@@ -37,12 +38,11 @@ Since columns are floated elements, MUST ADD &nbsp; inside the "widthContainer" 
 }
 .widthContainer {
     width: 100%;        /* width is changed later for large screens */
-    margin: 0 auto;
+    margin: 0 auto;     /*center it in the page */
     padding: 10px 0;     /* top & bottom must have some padding, to fix header accidentaly showing body */
 
     transition: 1.5s;   /*transition the width to 100% later on */
 }
-
 
 /*media queries on small screen to fix columns & mkae full width */
 @media (min-width: 800px){ /* these are actually what you see on big screens */
@@ -50,12 +50,12 @@ Since columns are floated elements, MUST ADD &nbsp; inside the "widthContainer" 
         width: 50%;
         float: left;     /* both float left so 2 columns end up on one row */
     }
-    .widthContainer {
+    .widthContainer {   /*take up 70% on large screens */
         width:70%;
     }
 }
 
-.todayHours{
+.todayHours{    /*initially these don't float at all, but are changed later */
     float:none;
 }
 .tinyLocation{
@@ -75,27 +75,8 @@ Since columns are floated elements, MUST ADD &nbsp; inside the "widthContainer" 
 }
 .colContainer{
     clear:both; /* this is important, so that multiple columns don't all go right */
-
-/*    > .twoCol:nth-child(1){        make the 1st column float left 
-        float: left;
-    }
-    > .twoCol:nth-child(2){        make the 2nd column float left 
-        float: right;
-    }*/
 }
 
-
-
-.todayHours .widthContainer{
-    //position: relative;
-}
-.todayHours .widthContainer div{
-    //position: absolute;
-}
-.tinyLocation{
-    //top: 10px;
-    //right: 0;
-}
 /*------------------------- end positioning/layout section */
 
 /*-------------------------color of page secions */
