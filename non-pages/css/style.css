@@ -1,10 +1,26 @@
+/*media queries on small screen to fix columns & mkae full width */
+.twoCol {
+  width: 100%;
+}
 .widthContainer {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   padding: 10px;
+  transition: 1.5s;
+  /*transition the width to 100% later on */
 }
-.twoCol {
-  width: 50%;
+@media (min-width: 800px) {
+  /* these are actually what you see on big screens */
+  .twoCol {
+    width: 50%;
+  }
+  .widthContainer {
+    width: 70%;
+  }
+}
+.colContainer {
+  clear: both;
+  /* this is important, so that multiple columns don't all go right */
 }
 .colContainer > .twoCol:nth-child(1) {
   float: left;
@@ -12,7 +28,6 @@
 .colContainer > .twoCol:nth-child(2) {
   float: right;
 }
-/*media queries on small screen to fix columns & mkae full width */
 body {
   margin: 0;
   font-size: 1.3em;
