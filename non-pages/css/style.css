@@ -1,9 +1,29 @@
+.widthContainer {
+  width: 70%;
+  margin: 0 auto;
+  padding: 10px;
+}
+.twoCol {
+  width: 50%;
+}
+.colContainer > .twoCol:nth-child(1) {
+  float: left;
+}
+.colContainer > .twoCol:nth-child(2) {
+  float: right;
+}
+/*.leftCol{
+    float: left;
+}
+.rightCOl{
+    float: right;
+}*/
+/*.widthContainer > .twoCol:nth-child(1){
+    left: 0;
+}*/
 body {
   margin: 0;
   background: grey;
-}
-.activePage {
-  background: red;
 }
 .galleria {
   height: 350px;
@@ -11,4 +31,7 @@ body {
 .galleria-theme-classic {
   /*change stage background color */
   background: orange;
+}
+footer {
+  background: lightyellow;
 }

@@ -187,3 +187,6 @@ li > a:only-child:after {
     width: 94%;
   }
 }
+.activePage {
+  background: #376561;
+}
