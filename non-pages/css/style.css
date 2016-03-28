@@ -5,3 +5,10 @@ body {
 .activePage {
   background: red;
 }
+.galleria {
+  height: 350px;
+}
+.galleria-theme-classic {
+  /*change stage background color */
+  background: orange;
+}
