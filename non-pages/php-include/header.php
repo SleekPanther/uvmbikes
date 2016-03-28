@@ -18,13 +18,12 @@ for($i =0; $i< count($daysRow); $i++){      //loop through the days array
 }
 ?>
 <header>
-    <div class="todayHours">
-        <section class="widthContainer">
-            <div>Hours Today: <?php echo $todayHours; ?> | <a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">See all hours</a></div>
-            &nbsp;<!-- need some content, or height=0 -->
-            <div class='tinyLocation'>Hills Building Room 101</div>
-        </section>
-    </div>
+    <section class="headerInfo">
+        <div class="widthContainer">
+            <div class="todayHours">Hours Today: <?php echo $todayHours; ?> | <a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">See all hours</a></div>
+            <div class='tinyLocation'>105 Carrigan Dr, Burlington, VT</div>
+        </div>
+    </section>
 
     <?php include ($upFolderPlaceholder . "non-pages/php-include/galleria-images.php"); ?>
 
