@@ -1,3 +1,5 @@
+<section class="slideshow">
+    <div class="widthContainer">
 <?php
 	echo "\t\t\t<!-- Galleria section -->\n".
 	"\t\t\t<div class='galleria'>\n";
@@ -54,3 +56,5 @@
 	<!-- end run galleria script -->
         </div>
 	<!-- end galleria section -->
+</div>
+</section>

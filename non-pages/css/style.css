@@ -12,26 +12,29 @@
 .colContainer > .twoCol:nth-child(2) {
   float: right;
 }
-/*.leftCol{
-    float: left;
-}
-.rightCOl{
-    float: right;
-}*/
-/*.widthContainer > .twoCol:nth-child(1){
-    left: 0;
-}*/
+/*media queries on small screen to fix columns & mkae full width */
 body {
   margin: 0;
+  font-size: 1.3em;
   background: grey;
+}
+.todayHours {
+  background: lightBlue;
 }
 .galleria {
   height: 350px;
 }
 .galleria-theme-classic {
   /*change stage background color */
-  background: orange;
+  background: Orange;
+}
+.slideshow {
+  background: Orange;
+}
+.mainContent {
+  background: tan;
 }
 footer {
-  background: lightyellow;
+  background: lightYellow;
+  font-size: .8em;
 }

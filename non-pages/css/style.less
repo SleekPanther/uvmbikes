@@ -1,17 +1,18 @@
+//color variables
+@todayHoursBackground: lightBlue;
+@slideshowBackground: Orange;
+@contentBackgroun: tan;
+@footerBackground: lightYellow;
+
 //width & positioning variables
 .widthContainer {
     width:70%;
     margin: 0 auto;
     padding: 10px;
-    //position: relative;
 }
-.colContainer{
-    
-}
+.colContainer{}
 .twoCol {
     width: 50%;
-    //float: left;
-    //position: absolute;
 }
 .colContainer > .twoCol:nth-child(1){
     float: left;
@@ -19,30 +20,35 @@
 .colContainer > .twoCol:nth-child(2){
     float: right;
 }
-/*.leftCol{
-    float: left;
-}
-.rightCOl{
-    float: right;
-}*/
-/*.widthContainer > .twoCol:nth-child(1){
-    left: 0;
-}*/
+
+/*media queries on small screen to fix columns & mkae full width */
 
 
 body {
     margin: 0;
+    font-size: 1.3em;
     background: grey;
+    //background: @footerBackground;
 }
 
+.todayHours {
+    background: @todayHoursBackground;
+}
 .galleria{
     height: 350px;
 }
 .galleria-theme-classic { /*change stage background color */
-    background: orange;
+    background: @slideshowBackground;
+}
+.slideshow{
+    background: @slideshowBackground;
 }
 
+.mainContent{
+    background: @contentBackgroun;
+}
 
 footer {
-    background: lightyellow;
+    background: @footerBackground;
+    font-size: .8em;
 }
