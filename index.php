@@ -27,9 +27,6 @@
             </div>
         </div>
         
-        <article>
-            <iframe class="volunteerCalendar" src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=reauks4s5avjthhqoo9sm7acks%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" scrolling="no"></iframe><!-- width="800" height="600" -->
-        </article>
     </div>
 </section>
 

@@ -137,5 +137,14 @@ iframe.volunteerCalendar {
   width: 100%;
 }
 /* ---------------- Iframes --------------------- */
+/* ------------------- Hours ---------------------------*/
+#hours table {
+  border-collapse: collapse;
+}
+#hours th,
+#hours td {
+  border: 1px solid black;
+}
+/* ------------------- Hours ---------------------------*/
 /*------------------Home page --------------------------*/
 /*------------------END Home page --------------------------*/
