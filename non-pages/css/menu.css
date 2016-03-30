@@ -17,11 +17,11 @@ nav {
   font-size: 20px;
   color: white;
   /*    line-height: 60px;*/
-  height: 3.5em;
+  height: 3em;
 }
 #logo a {
   padding: 0;
-  height: 3.5em;
+  height: 3em;
   line-height: 100%;
 }
 #logo a .logoLink {
@@ -29,7 +29,7 @@ nav {
   padding: .7em 0 0 0 ;
 }
 #logo img {
-  height: 3.5em;
+  height: 3em;
   float: left;
 }
 nav:after {
@@ -54,7 +54,7 @@ nav a {
   padding: 0 20px;
   color: #FFF;
   font-size: 20px;
-  line-height: 3.5em;
+  line-height: 3em;
   /*    line-height: 60px;*/
   text-decoration: none;
 }
@@ -130,7 +130,7 @@ li > a:only-child:after {
     padding: 0 20px;
     color: #FFF;
     font-size: 20px;
-    line-height: 3.5em;
+    line-height: 3em;
     text-decoration: none;
     border: none;
   }

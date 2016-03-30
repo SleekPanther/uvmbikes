@@ -20,8 +20,10 @@ for($i =0; $i< count($daysRow); $i++){      //loop through the days array
 <header>
     <section class="headerInfo">
         <div class="widthContainer">
+            <article>
             <div class="todayHours">Hours Today: <?php echo $todayHours; ?> | <a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">See all hours</a></div>
             <div class='tinyLocation'>105 Carrigan Dr, Burlington, VT</div>
+            </article>
         </div>
     </section>
 

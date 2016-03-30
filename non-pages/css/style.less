@@ -51,7 +51,7 @@ each piece of content is inside an <article> which has padding. This is to full-
 .widthContainer {
     width: 100%;        /* width is changed later for large screens */
     margin: 0 auto;     /*center it in the page */
-    padding: 10px 0;     /* top & bottom must have some padding, to fix header accidentaly showing body */
+    //padding: 10px 0;     /* top & bottom must have some padding, to fix header accidentaly showing body */
 
     transition: 1.5s;   /*transition the width to 100% later on */
 
@@ -87,7 +87,7 @@ each piece of content is inside an <article> which has padding. This is to full-
     }
 }
 
-.mainContent, footer, .headerInfo .widthContainer {  /* THIS IS MAGIC. Since twoCol & most elements are floated, their parent take up no height. This forces the parent to contain children */
+.mainContent, footer, .headerInfo article {  /* THIS IS MAGIC. Since twoCol & most elements are floated, their parent take up no height. This forces the parent to contain children. Needs to be applied to the direct parent of any ALL-FLOATED-ELEMEENt sections*/
     overflow: auto;   /* hidden or auto both seem to work */
 }
 .colContainer{
