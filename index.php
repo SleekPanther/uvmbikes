@@ -5,13 +5,16 @@
         <div class="colContainer">
             <div class="twoCol">
                 <article><h1><?php echo $navTitle; ?> - UVM Bikes</h1>
-                    <p>We are a volunteer-run club providing bike repairs to students at University of Vermont. Stop by to get your bike fixed.</p>
+                    <p>We are a student club providing bike repairs and promoting bicycle use at University of Vermont. Stop by to get your bike fixed.</p>
                     <h2>Free Labor</h2>
                     <p>That's right, we're here to help you, not make money. Labor is free and we aim to reuse parts or provide cheap ones when the need arises.</p>
                     <p>Check our <a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">price list</a> for common repairs. </p>
                     
                     <h2>Get Involved</h2>
-                    <p><a href="<?php echo $upFolderPlaceholder; ?>contact/index.php">Contact us</a> to join the club and sign up to volunteer at the shop. You can share you bike knowledge to help students, or learn brand new skills if </p>
+                    <p><a href="<?php echo $upFolderPlaceholder; ?>contact/index.php">Contact us</a> to join the club. Sign up become a volunteer at the shop. Share you bike knowledge or learn brand new skills if you've never worked on bikes.</p>
+                    
+                    <h2>Bike Share and Rentals</h2>
+                    <p>We provide access to wheels on campus to those that need them. <a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">Learn more</a></p>
                     
                     <h2>Spread The Word</h2>
                     <p>We are funded through <a href="http://www.uvm.edu/sga/">The Student Government Association</a>. We need to show that we're an active club, so tell your fiends.</p>
