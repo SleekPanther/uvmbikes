@@ -4,6 +4,11 @@
 @contentBackground: tan;
 @footerBackground: lightYellow;
 
+//mixin classes
+.thinBlackBorder{
+    border: 1px solid black;
+}
+
 /*------------------------- general syles & global positioning */
 body {
     margin: 0;
@@ -131,16 +136,40 @@ iframe {
 /* ---------------- Iframes --------------------- */
 
 /* ------------------- Hours ---------------------------*/
-//#hours{
-    table {
-        border-collapse: collapse;
-        width: 100%;        /* this makes it take up the width of the container */
+table {
+    border-collapse: collapse;
+    width: 100%;        /* this makes it take up the width of the container */
+}
+th,td {
+    .thinBlackBorder;   /*give cells a border */
+    padding: .2em;
+}
+th{
+    text-align: center;
+}
+
+#prices-services{
+    td, th{
+        width: 50%;
+        padding-left: .5em;     /*add some more padding on the left on the prices table */
     }
+    th{
+        border:0;   /* remove border on most table headers */
+        padding-top: 1em;
+    }
+    table tr:nth-child(1) th, table tr:nth-child(2) th {    /*give border for the 1st 2 rows */
+        .thinBlackBorder;
+    }
+    tr:hover{
+        background: white;
+    }
+}
+
+#hours {
     th,td {
-        border: 1px solid black;
         text-align: center;
-        padding: .2em;
     }
+}
 //}
 /* ------------------- Hours ---------------------------*/
 

@@ -1,3 +1,6 @@
+.thinBlackBorder {
+  border: 1px solid black;
+}
 /*------------------------- general syles & global positioning */
 body {
   margin: 0;
@@ -148,8 +151,34 @@ table {
 th,
 td {
   border: 1px solid black;
-  text-align: center;
+  /*give cells a border */
   padding: .2em;
+}
+th {
+  text-align: center;
+}
+#prices-services td,
+#prices-services th {
+  width: 50%;
+  padding-left: .5em;
+  /*add some more padding on the left on the prices table */
+}
+#prices-services th {
+  border: 0;
+  /* remove border on most table headers */
+  padding-top: 1em;
+}
+#prices-services table tr:nth-child(1) th,
+#prices-services table tr:nth-child(2) th {
+  /*give border for the 1st 2 rows */
+  border: 1px solid black;
+}
+#prices-services tr:hover {
+  background: white;
+}
+#hours th,
+#hours td {
+  text-align: center;
 }
 /* ------------------- Hours ---------------------------*/
 /*------------------Home page --------------------------*/

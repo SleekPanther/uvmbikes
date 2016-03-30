@@ -29,20 +29,24 @@
                     }
                     fclose($pricesFile);      //closes the file
                     
-                    
-                    //for($i = 0; $i < 2; $i++)
-                    foreach($pricesFileContents as $row){
-                        echo "\<tr>\n";
+                    foreach($pricesFileContents as $row){       //loop through the rows in the file
+                        echo "\t\t<tr>\n";
                         
-                        foreach($row as $cell){
-                            echo "\t\t<th>",
-                                 $pricesFileContents[0][$i],
-                                 "</td>";
+                        for($i = 1; $i< count($row); $i++){     //start @ index=1, since 0th columns is for whether it's a header or not
+                            if($row[0] == "header"){        //compare the 0th column. If it's a header (& has the contents "header")
+                                echo "\t\t\t<th>",          //print it as a header NOT a normal <td>
+                                 $row[$i],
+                                 "</th>\n";
+                            }
+                            else{                       //if it's NOT a header, just print the contents as a normal <td>
+                                echo "\t\t\t<td>",
+                                 $row[$i],              //prints the cell (row @ indes $i, since $i starts at 1, there's no danger of printing out "header")
+                                 "</td>\n";
+                            }
                         }
                         
-                        echo "\<tr>\n";
+                        echo "\n\t\t</tr>\n";
                     }
-                    
                 ?>
             </table>
         </article>
