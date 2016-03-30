@@ -8,7 +8,13 @@
                     <p>We are a volunteer-run club providing bike repairs to students at University of Vermont. Stop by to get your bike fixed.</p>
                     <h2>Free Labor</h2>
                     <p>That's right, we're here to help you, not make money. Labor is free and we aim to reuse parts or provide cheap ones when the need arises.</p>
-                    <p>Check our <a href="">price list</a> for common repairs.</p>opularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+                    <p>Check our <a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">price list</a> for common repairs. </p>
+                    
+                    <h2>Get Involved</h2>
+                    <p><a href="<?php echo $upFolderPlaceholder; ?>contact/index.php">Contact us</a> to join the club and sign up to volunteer at the shop. You can share you bike knowledge to help students, or learn brand new skills if </p>
+                    
+                    <h2>Spread The Word</h2>
+                    <p>We are funded through <a href="http://www.uvm.edu/sga/">The Student Government Association</a>. We need to show that we're an active club, so tell your fiends.</p>
                 </article>
             </div>
             <div class="twoCol">
@@ -17,6 +23,10 @@
                 </article>
             </div>
         </div>
+        
+        <article>
+            <iframe class="volunteerCalendar" src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=reauks4s5avjthhqoo9sm7acks%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" scrolling="no"></iframe><!-- width="800" height="600" -->
+        </article>
     </div>
 </section>
 

@@ -7,13 +7,31 @@ body {
 h1 {
   font-size: 1.6em;
 }
+h2 {
+  font-size: 1.4em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1em;
+}
+h5 {
+  font-size: 0.8em;
+}
+h6 {
+  font-size: 0.6em;
+}
 h1,
 h2,
-h3 {
-  margin-bottom: 0;
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 p {
-  margin: .5em 0;
+  margin: 0 0 .5em 0;
 }
 /*All horizontal sections get some class or id like "mainContent" or "slideshow. Background color is set here
 Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
@@ -21,13 +39,11 @@ For columns, there's a div with class "colContainer" (to make sure elements don'
 colContainer is like a row, & inside 2 divs get classes "twoCol". They float left/right on big screens then span the entire width on small screens
 colContainer is optional when only working with one "row" (like in the footer where there are just 2 columns)
 Using a min-width approach for media queries, I start with the smallest screens, then @ a certain size, style for the larger screen  
-The sections that contain widthContainers MUST HAVE overflow: auto or hidden (this is because the twoCol floated elements take up no height)*/
+The sections that contain widthContainers MUST HAVE overflow: auto or hidden (this is because the twoCol floated elements take up no height)
+each piece of content is inside an <article> which has padding. This is to full-width content can also have padding (not just twoCol)*/
 .twoCol {
   /*using a min-width approach it starts off 100% & is changed later */
   width: 100%;
-}
-.twoCol article {
-  padding: 1em 1em 0 0;
 }
 .widthContainer {
   width: 100%;
@@ -38,6 +54,9 @@ The sections that contain widthContainers MUST HAVE overflow: auto or hidden (th
   /* top & bottom must have some padding, to fix header accidentaly showing body */
   transition: 1.5s;
   /*transition the width to 100% later on */
+}
+.widthContainer article {
+  padding: .5em;
 }
 /*media queries on small screen to fix columns & mkae full width */
 @media (min-width: 800px) {
@@ -101,14 +120,20 @@ footer {
   background: lightYellow;
   font-size: .8em;
 }
-/*-------------------------END color of page secions */
-/*------------------Home page --------------------------*/
+/*-------------------------END color of page secions -------------------*/
+/* ---------------- Iframes (maps & calendars) --------------------- */
 iframe {
   border: 0;
   display: block;
 }
-#index .map {
+iframe.map {
   width: 100%;
   height: 20em;
 }
+iframe.volunteerCalendar {
+  height: 30em;
+  width: 100%;
+}
+/* ---------------- Iframes --------------------- */
+/*------------------Home page --------------------------*/
 /*------------------END Home page --------------------------*/
