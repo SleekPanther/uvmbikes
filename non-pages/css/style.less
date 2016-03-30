@@ -52,6 +52,7 @@ each piece of content is inside an <article> which has padding. This is to full-
 
     article {
         padding: .5em;
+        clear: both;        /* this targets  all articles, but only affects those that follow a colContainer & makes them start on a new line (just in case there's only 1 twoCOl on the left & it leaves floating space on the right). */
     }
 }
 
@@ -130,7 +131,7 @@ iframe {
 /* ---------------- Iframes --------------------- */
 
 /* ------------------- Hours ---------------------------*/
-#hours{
+//#hours{
     table {
         border-collapse: collapse;
         width: 100%;        /* this makes it take up the width of the container */
@@ -140,7 +141,7 @@ iframe {
         text-align: center;
         padding: .2em;
     }
-}
+//}
 /* ------------------- Hours ---------------------------*/
 
 /*------------------Home page --------------------------*/

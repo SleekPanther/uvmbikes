@@ -30,12 +30,6 @@
             ?>
             </table>
         </article>
-        <!--<div class="colContainer">
-            <div class="twoCol">
-                <article>
-                </article>
-            </div>
-        </div>-->
         
         <article>
             <h2>Our Volunteers</h2>

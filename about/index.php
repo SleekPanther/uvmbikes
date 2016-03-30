@@ -1,10 +1,25 @@
-<?php include("../non-pages/php-include/top.php");  ?>
+<?php include("../non-pages/php-include/top.php"); ?>
 
-        <h1><?php echo $navTitle; ?></h1>
-        <?php echo $upFolderPlaceholder;
-        echo "<br>". print_r($activePageArray);
-       echo "<br>activepg array:   ". $activePageArray[$containing_folder];
-       echo "<br>".$containing_folder;
-            ?>
-    </body>
+<section class="mainContent">
+    <div class="widthContainer">
+        <div class="colContainer">
+            <div class="twoCol">
+                <article>
+                    <h1><?php echo $navTitle; ?></h1>
+                    
+                </article>
+            </div>
+        </div>
+        
+        <!--<div class="colContainer">
+            <div class="twoCol">
+                <article>
+                </article>
+            </div>
+        </div>-->
+    </div>
+</section>
+
+<?php include($upFolderPlaceholder . "non-pages/php-include/footer.php"); ?>
+</body>
 </html>
