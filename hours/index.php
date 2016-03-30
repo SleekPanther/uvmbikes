@@ -2,8 +2,8 @@
 
 <section class="mainContent">
     <div class="widthContainer">
-        <h1><?php echo $navTitle; ?></h1>
         <article>
+            <h1><?php echo $navTitle; ?></h1>
             <?php
                 // $hoursFileContents already exists from header, so don't bother opening the file again
                 if($hoursFileContents[2][0] != ''){     //if the 3rd row, 1st element has text, print it (something like "Closed for the summer - Sorry"
@@ -38,6 +38,7 @@
         </div>-->
         
         <article>
+            <h2>Our Volunteers</h2>
             <iframe class="volunteerCalendar" src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=reauks4s5avjthhqoo9sm7acks%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" scrolling="no"></iframe><!-- width="800" height="600" -->
         </article>
     </div>

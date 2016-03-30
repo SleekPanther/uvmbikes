@@ -140,10 +140,14 @@ iframe.volunteerCalendar {
 /* ------------------- Hours ---------------------------*/
 #hours table {
   border-collapse: collapse;
+  width: 100%;
+  /* this makes it take up the width of the container */
 }
 #hours th,
 #hours td {
   border: 1px solid black;
+  text-align: center;
+  padding: .2em;
 }
 /* ------------------- Hours ---------------------------*/
 /*------------------Home page --------------------------*/

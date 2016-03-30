@@ -14,7 +14,12 @@
             <div class="twoCol">
                 <article>
                     <ul>
-                        <li>navlist</li>
+                        <li><a href="<?php echo $upFolderPlaceholder; ?>index.php">Home</a></li>
+                        <li><a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">Prices / Services</a></li>
+                        <li><a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">Hours</a></li>
+                        <li><a href="<?php echo $upFolderPlaceholder; ?>classes-events/index.php">Classes / Events</a></li>
+                        <li><a href="<?php echo $upFolderPlaceholder; ?>contact/index.php">Contact</a></li>
+                        <li><a href="<?php echo $upFolderPlaceholder; ?>about/index.php">About</a></li>
                     </ul>
                 </article>
             </div>
