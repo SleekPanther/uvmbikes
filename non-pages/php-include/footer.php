@@ -1,4 +1,4 @@
-<!-- start footer section-->
+<!-- start footer.php -->
 <footer>
     <div class="widthContainer">
         <div class="colContainer">
@@ -27,4 +27,4 @@
     &nbsp;<!-- need some content, or the box is 0px tall (all floated) -->
     </div>
 </footer>
-<!-- end footer section-->
+<!-- end footer.php -->

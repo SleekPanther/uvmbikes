@@ -1,6 +1,6 @@
 <?php include("non-pages/php-include/top.php"); ?>
 
-<section class="mainContent">
+<main>
     <div class="widthContainer">
         <div class="colContainer">
             <div class="twoCol">
@@ -35,7 +35,7 @@
         </div>-->
         
     </div>
-</section>
+</main>
 
 <?php include($upFolderPlaceholder . "non-pages/php-include/footer.php"); ?>
 </body>

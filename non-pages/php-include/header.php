@@ -1,4 +1,4 @@
-<!-- header -->
+<!-- header.php -->
 <?php
 $hoursFile = fopen($upFolderPlaceholder . "non-pages/csv/hours.csv", "r");
 
@@ -30,4 +30,4 @@ for($i =0; $i< count($daysRow); $i++){      //loop through the days array
     <?php include ($upFolderPlaceholder . "non-pages/php-include/galleria-images.php"); ?>
 
 </header>
-<!-- end header -->
+<!-- end header.php -->

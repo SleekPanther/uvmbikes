@@ -1,6 +1,5 @@
 <?php include("../non-pages/php-include/top.php"); ?>
-
-<section class="mainContent">
+<main>
     <div class="widthContainer">
         <article>
             <h1><?php echo $navTitle; ?></h1>
@@ -33,10 +32,10 @@
         
         <article>
             <h2>Our Volunteers</h2>
-            <iframe class="volunteerCalendar" src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=reauks4s5avjthhqoo9sm7acks%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York" scrolling="no"></iframe><!-- width="800" height="600" -->
+            <iframe class="volunteerCalendar" src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=reauks4s5avjthhqoo9sm7acks%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York"></iframe><!-- width="800" height="600" -->
         </article>
     </div>
-</section>
+</main>
 
 <?php include($upFolderPlaceholder . "non-pages/php-include/footer.php"); ?>
 </body>

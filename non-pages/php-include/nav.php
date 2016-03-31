@@ -1,4 +1,4 @@
-<!-- nav -->
+<!-- nav.php -->
 <nav>
     <div id="logo"><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; ?>><img src="<?php echo $upFolderPlaceholder;?>images/logo/logo.png" alt="UVM Bikes"><span class="logoLink">Free Campus<br>Bike Shop</span></a></div>
         <label for="drop" class="toggle">Show/Hide Menu</label>
