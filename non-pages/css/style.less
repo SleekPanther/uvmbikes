@@ -4,7 +4,7 @@
 @contentBackground: tan;
 @footerBackground: lightYellow;
 
-//mixin classes
+//mixin classes for LESS
 .thinBlackBorder{
     border: 1px solid black;
 }
@@ -35,7 +35,7 @@ p{
     margin: 0 0 .5em 0;
 }
 
-/*All horizontal sections get some class or id like "mainContent" or "slideshow. Background color is set here
+/*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here
 Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
 For columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
 colContainer is like a row, & inside 2 divs get classes "twoCol". They float left/right on big screens then span the entire width on small screens
@@ -44,7 +44,7 @@ Using a min-width approach for media queries, I start with the smallest screens,
 The sections that contain widthContainers MUST HAVE overflow: auto or hidden (this is because the twoCol floated elements take up no height)
 each piece of content is inside an <article> which has padding. This is to full-width content can also have padding (not just twoCol)*/
 
-//width & positioning variables
+/* width & positioning classes */
 .twoCol {   /*using a min-width approach it starts off 100% & is changed later */
     width: 100%;
 }
@@ -87,7 +87,7 @@ each piece of content is inside an <article> which has padding. This is to full-
     }
 }
 
-.mainContent, footer, .headerInfo article {  /* THIS IS MAGIC. Since twoCol & most elements are floated, their parent take up no height. This forces the parent to contain children. Needs to be applied to the direct parent of any ALL-FLOATED-ELEMEENt sections*/
+main, footer, .headerInfo article {  /* THIS IS MAGIC. Since twoCol & most elements are floated, their parent take up no height. This forces the parent to contain children. Needs to be applied to the direct parent of any ALL-FLOATED-ELEMEENt sections*/
     overflow: auto;   /* hidden or auto both seem to work */
 }
 .colContainer{
@@ -110,7 +110,7 @@ each piece of content is inside an <article> which has padding. This is to full-
     background: @slideshowBackground;
 }
 
-.mainContent{
+main{
     background: @contentBackground;
 }
 
@@ -118,7 +118,7 @@ footer {
     background: @footerBackground;
     font-size: .8em;
 }
-/*-------------------------END color of page secions -------------------*/
+/*-------------------------END "color of page" secions -------------------*/
 
 /* ---------------- Iframes (maps & calendars) --------------------- */
 iframe {
@@ -135,7 +135,7 @@ iframe {
 }
 /* ---------------- Iframes --------------------- */
 
-/* ------------------- Hours ---------------------------*/
+/* ------------------- General Table styles ---------------------------*/
 table {
     border-collapse: collapse;
     width: 100%;        /* this makes it take up the width of the container */
@@ -147,6 +147,7 @@ th,td {
 th{
     text-align: center;
 }
+/*--------------------- end table style ----------------------------*/
 
 #prices-services{
     td, th{
@@ -165,13 +166,13 @@ th{
     }
 }
 
+/* ------------------- Hours ---------------------------*/
 #hours {
     th,td {
         text-align: center;
     }
 }
-//}
-/* ------------------- Hours ---------------------------*/
+/* ------------------- end Hours ---------------------------*/
 
 /*------------------Home page --------------------------*/
 
