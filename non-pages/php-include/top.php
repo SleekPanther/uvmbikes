@@ -54,18 +54,6 @@
 	
         $upFolderPlaceholderArray = array("", "../", "../../", "../../../");        //0 folders down corresponds to "", 1 folder down corresponds to ../ (so that links go to the right place
         $upFolderPlaceholder = $upFolderPlaceholderArray[ $folderCountAdjusted ];   //this is used extensively to make links in subfolders go to the right location. It checks how many folders down it is, then prints the correct number or ../ to get there
-//	if ($folderCountAdjusted == 0) {
-//            $upFolderPlaceholder = "";
-//	}
-//	else if ($folderCountAdjusted == 1) {
-//            $upFolderPlaceholder = "../";
-//	}
-//	else if ($folderCountAdjusted == 2) {
-//            $upFolderPlaceholder = "../../";
-//	}
-//        else if ($folderCountAdjusted == 3) {
-//            $upFolderPlaceholder = "../../../";
-//	}
             
         $debug = false;  //Localhost says error if not define here, hope it doesn't hurt
         if ($debug) {
@@ -124,7 +112,6 @@
         }
     ?>
     
-<?php //echo $upFolderPlaceholder ?>
     <?php
         include ($upFolderPlaceholder."non-pages/php-include/nav.php");
         include ($upFolderPlaceholder."non-pages/php-include/header.php");
