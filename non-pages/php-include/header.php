@@ -3,7 +3,7 @@
 $hoursFile = fopen($upFolderPlaceholder . "non-pages/csv/hours.csv", "r");
 
 while (!feof($hoursFile)) {               //while not "end of file(eof)"
-    $hoursFileContents[] = fgetcsv($hoursFile);     //add rows to $hoursFileContents array. It becomed a  2D array
+    $hoursFileContents[] = fgetcsv($hoursFile);     //add rows to $hoursFileContents array. It becomes a  2D array
 }
 fclose($hoursFile);      //closes the file
 
