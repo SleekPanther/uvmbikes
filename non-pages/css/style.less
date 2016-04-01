@@ -30,8 +30,9 @@ body {
 .headers-generator(@n; @i : 1) when (@i =< @n)
 {
     h@{i} {
-        font-size: (1.6em - (@i - 1) * 0.2);
+        font-size: (1.8em - (@i - 1) * 0.2);
         margin: .2em 0;         /* remove default margin for heading & make it much smaller */
+        .b;     /* make sure all heading are bold, if the browser doesn't do so automatically */
     }
     .headers-generator(@n; (@i + 1));
 }

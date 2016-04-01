@@ -19,34 +19,52 @@ body {
   text-align: center;
 }
 h1 {
+  font-size: 1.8em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+  /* make sure all heading are bold, if the browser doesn't do so automatically */
+}
+h2 {
   font-size: 1.6em;
   margin: .2em 0;
   /* remove default margin for heading & make it much smaller */
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+  /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
-h2 {
+h3 {
   font-size: 1.4em;
   margin: .2em 0;
   /* remove default margin for heading & make it much smaller */
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+  /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
-h3 {
+h4 {
   font-size: 1.2em;
   margin: .2em 0;
   /* remove default margin for heading & make it much smaller */
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+  /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
-h4 {
+h5 {
   font-size: 1em;
   margin: .2em 0;
   /* remove default margin for heading & make it much smaller */
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+  /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
-h5 {
+h6 {
   font-size: 0.8em;
   margin: .2em 0;
   /* remove default margin for heading & make it much smaller */
-}
-h6 {
-  font-size: 0.6em;
-  margin: .2em 0;
-  /* remove default margin for heading & make it much smaller */
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+  /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 ul,
 ol {
