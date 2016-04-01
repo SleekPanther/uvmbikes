@@ -16,18 +16,28 @@ body {
     background: grey;
     //background: @footerBackground;
 }
+.b{         /*classes to easily add bold or italic */
+    font-weight: bold;
+}
+.i{
+    font-style: italic;
+}
+.cent{      /*shorthand class to center text */
+    text-align: center;
+}
 
 // http://stackoverflow.com/questions/24123195/less-css-nested-loops-for-header-elements
 .headers-generator(@n; @i : 1) when (@i =< @n)
 {
     h@{i} {
-        font-size: (1.6em - (@i - 1) * 0.2);    
+        font-size: (1.6em - (@i - 1) * 0.2);
+        margin: .2em 0;         /* remove default margin for heading & make it much smaller */
     }
     .headers-generator(@n; (@i + 1));
 }
 .headers-generator(6);
 
-h1, h2, h3,h4,h5,h6,
+//h1, h2, h3,h4,h5,h6,
 ul, ol {
     margin: 0;
 }
@@ -128,6 +138,10 @@ img {       /* make images take up fil width of figcontainers */
     img{    /*overrides 100% width for images in the logo nav */
         width: auto;
     }
+}
+/*id's for specific images */
+figcaption{
+    
 }
 /*------------------------EndImages sizing -------------------------------------*/
 

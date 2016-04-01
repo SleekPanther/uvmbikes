@@ -7,30 +7,47 @@ body {
   font-size: 1.3em;
   background: grey;
 }
+.b {
+  /*classes to easily add bold or italic */
+  font-weight: bold;
+}
+.i {
+  font-style: italic;
+}
+.cent {
+  /*shorthand class to center text */
+  text-align: center;
+}
 h1 {
   font-size: 1.6em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
 }
 h2 {
   font-size: 1.4em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
 }
 h3 {
   font-size: 1.2em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
 }
 h4 {
   font-size: 1em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
 }
 h5 {
   font-size: 0.8em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
 }
 h6 {
   font-size: 0.6em;
+  margin: .2em 0;
+  /* remove default margin for heading & make it much smaller */
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 ul,
 ol {
   margin: 0;
@@ -136,6 +153,7 @@ img {
   /*overrides 100% width for images in the logo nav */
   width: auto;
 }
+/*id's for specific images */
 /*------------------------EndImages sizing -------------------------------------*/
 /* ---------------- Iframes (maps & calendars) --------------------- */
 iframe {
