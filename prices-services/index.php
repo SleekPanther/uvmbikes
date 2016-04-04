@@ -2,10 +2,12 @@
 
 <main>
     <div class="widthContainer">
+        <article><h1 class="cent"><?php echo $navTitle; ?></h1></article>
+    </div>
+    <div class="widthContainer">
         <div class="colContainer">
             <div class="twoCol">
                 <article>
-                    <h1><?php echo $navTitle; ?></h1>
                     <h2>Common Repairs</h2>
                     <ul>
                         <li>Pump your tires</li>

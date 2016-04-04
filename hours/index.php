@@ -1,8 +1,10 @@
 <?php include("../non-pages/php-include/top.php"); ?>
 <main>
     <div class="widthContainer">
+        <article><h1 class="cent"><?php echo $navTitle; ?></h1></article>
+    </div>
+    <div class="widthContainer">
         <article>
-            <h1><?php echo $navTitle; ?></h1>
             <?php
                 // $hoursFileContents already exists from header, so don't bother opening the file again
                 if($hoursFileContents[2][0] != ''){     //if the 3rd row, 1st element has text, print it (something like "Closed for the summer - Sorry"

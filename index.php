@@ -2,9 +2,12 @@
 
 <main>
     <div class="widthContainer">
+        <article><h1 class="cent"><?php echo $navTitle; ?> - UVM Bikes</h1></article>
+    </div>
+    <div class="widthContainer">
         <div class="colContainer">
             <div class="twoCol">
-                <article><h1><?php echo $navTitle; ?> - UVM Bikes</h1>
+                <article>
                     <p>We are a student club providing bike repairs and promoting bicycle use at University of Vermont. Stop by to get your bike fixed.</p>
                     <h2>Free Labor</h2>
                     <p>That's right, we're here to help you, not make money. Labor is free and we aim to reuse parts or provide cheap ones when the need arises.</p>

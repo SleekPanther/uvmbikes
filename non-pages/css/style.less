@@ -5,15 +5,16 @@
 @footerBackground: lightYellow;
 
 //mixin classes for LESS
-.thinBlackBorder{
-    border: 1px solid black;
+@thinBlackBorder: 1px solid black;;
+.thinBlackBorderAll{    /*border for boxes, 4 sides */
+    border: @thinBlackBorder;
 }
 
-/*------------------------- general syles & global positioning */
+/*------------------------- general syles & global positioning ---------------------- */
 body {
     margin: 0;
     font-size: 1.3em;
-    background: grey;
+    background: @contentBackground;
     //background: @footerBackground;
 }
 .b{         /*classes to easily add bold or italic */
@@ -37,6 +38,11 @@ body {
     .headers-generator(@n; (@i + 1));
 }
 .headers-generator(6);
+
+.widthContainer article h1:first-child {    /*put a border on the 1st h1 on each page, (the page name)) */
+    border-bottom: @thinBlackBorder;
+    .cent;
+}
 
 //h1, h2, h3,h4,h5,h6,
 ul, ol {
@@ -105,9 +111,9 @@ main, footer, .headerInfo article {  /* THIS IS MAGIC. Since twoCol & most eleme
     clear:both; /* this is important, so that multiple columns don't all go right */
 }
 
-/*------------------------- end positioning/layout section */
+/*------------------------- end positioning/layout section -------------------------*/
 
-/*-------------------------color of page secions */
+/*-------------------------color of page secions ---------------------------------*/
 .headerInfo {
     background: @headerInfoBackground;
 }
@@ -129,9 +135,9 @@ footer {
     background: @footerBackground;
     font-size: .8em;
 }
-/*-------------------------END "color of page" secions -------------------*/
+/*-------------------------END "color of page" secions -----------------------------*/
 
-/*------------------------Images sizing -------------------------------------*/
+/*----------------------------Images sizing --------------------------------------------*/
 img {       /* make images take up fil width of figcontainers */
     width: 100%;
 }
@@ -144,9 +150,9 @@ img {       /* make images take up fil width of figcontainers */
 figcaption{
     
 }
-/*------------------------EndImages sizing -------------------------------------*/
+/*--------------------------------EndImages sizing -------------------------------------*/
 
-/* ---------------- Iframes (maps & calendars) --------------------- */
+/* ----------------------- Iframes (maps & calendars) ---------------------------------- */
 iframe {
     border: 0;
     display: block;
@@ -159,21 +165,21 @@ iframe {
         width: 100%;
     }
 }
-/* ---------------- Iframes --------------------- */
+/* ---------------------------- end Iframes ---------------------------------- */
 
-/* ------------------- General Table styles ---------------------------*/
+/* -------------------------- General Table styles -----------------------------*/
 table {
     border-collapse: collapse;
     width: 100%;        /* this makes it take up the width of the container */
 }
 th,td {
-    .thinBlackBorder;   /*give cells a border */
+    .thinBlackBorderAll;   /*give cells a border */
     padding: .2em;
 }
 th{
     text-align: center;
 }
-/*--------------------- end table style ----------------------------*/
+/*--------------------------- end table style ---------------------------------*/
 
 #prices-services{
     td, th{
@@ -185,21 +191,21 @@ th{
         padding-top: 1em;
     }
     table tr:nth-child(1) th, table tr:nth-child(2) th {    /*give border for the 1st 2 rows */
-        .thinBlackBorder;
+        .thinBlackBorderAll;
     }
     tr:hover{
         background: white;
     }
 }
 
-/* ------------------- Hours ---------------------------*/
+/* ------------------------------- Hours --------------------------------------*/
 #hours {
     th,td {
         text-align: center;
     }
 }
-/* ------------------- end Hours ---------------------------*/
+/* -------------------------------- end Hours --------------------------------------*/
 
-/*------------------Home page --------------------------*/
+/*-------------------------------Home page ----------------------------------------*/
 
-/*------------------END Home page --------------------------*/
+/*----------------------------------END Home page -------------------------------------*/

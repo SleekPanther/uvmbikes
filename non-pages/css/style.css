@@ -1,11 +1,12 @@
-.thinBlackBorder {
+.thinBlackBorderAll {
+  /*border for boxes, 4 sides */
   border: 1px solid black;
 }
-/*------------------------- general syles & global positioning */
+/*------------------------- general syles & global positioning ---------------------- */
 body {
   margin: 0;
   font-size: 1.3em;
-  background: grey;
+  background: tan;
 }
 .b {
   /*classes to easily add bold or italic */
@@ -65,6 +66,12 @@ h6 {
   /*classes to easily add bold or italic */
   font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
+}
+.widthContainer article h1:first-child {
+  /*put a border on the 1st h1 on each page, (the page name)) */
+  border-bottom: 1px solid black;
+  /*shorthand class to center text */
+  text-align: center;
 }
 ul,
 ol {
@@ -139,8 +146,8 @@ footer,
   clear: both;
   /* this is important, so that multiple columns don't all go right */
 }
-/*------------------------- end positioning/layout section */
-/*-------------------------color of page secions */
+/*------------------------- end positioning/layout section -------------------------*/
+/*-------------------------color of page secions ---------------------------------*/
 .headerInfo {
   background: lightBlue;
 }
@@ -161,8 +168,8 @@ footer {
   background: lightYellow;
   font-size: .8em;
 }
-/*-------------------------END "color of page" secions -------------------*/
-/*------------------------Images sizing -------------------------------------*/
+/*-------------------------END "color of page" secions -----------------------------*/
+/*----------------------------Images sizing --------------------------------------------*/
 img {
   /* make images take up fil width of figcontainers */
   width: 100%;
@@ -172,8 +179,8 @@ img {
   width: auto;
 }
 /*id's for specific images */
-/*------------------------EndImages sizing -------------------------------------*/
-/* ---------------- Iframes (maps & calendars) --------------------- */
+/*--------------------------------EndImages sizing -------------------------------------*/
+/* ----------------------- Iframes (maps & calendars) ---------------------------------- */
 iframe {
   border: 0;
   display: block;
@@ -186,8 +193,8 @@ iframe.volunteerCalendar {
   height: 30em;
   width: 100%;
 }
-/* ---------------- Iframes --------------------- */
-/* ------------------- General Table styles ---------------------------*/
+/* ---------------------------- end Iframes ---------------------------------- */
+/* -------------------------- General Table styles -----------------------------*/
 table {
   border-collapse: collapse;
   width: 100%;
@@ -195,6 +202,7 @@ table {
 }
 th,
 td {
+  /*border for boxes, 4 sides */
   border: 1px solid black;
   /*give cells a border */
   padding: .2em;
@@ -202,7 +210,7 @@ td {
 th {
   text-align: center;
 }
-/*--------------------- end table style ----------------------------*/
+/*--------------------------- end table style ---------------------------------*/
 #prices-services td,
 #prices-services th {
   width: 50%;
@@ -217,16 +225,17 @@ th {
 #prices-services table tr:nth-child(1) th,
 #prices-services table tr:nth-child(2) th {
   /*give border for the 1st 2 rows */
+  /*border for boxes, 4 sides */
   border: 1px solid black;
 }
 #prices-services tr:hover {
   background: white;
 }
-/* ------------------- Hours ---------------------------*/
+/* ------------------------------- Hours --------------------------------------*/
 #hours th,
 #hours td {
   text-align: center;
 }
-/* ------------------- end Hours ---------------------------*/
-/*------------------Home page --------------------------*/
-/*------------------END Home page --------------------------*/
+/* -------------------------------- end Hours --------------------------------------*/
+/*-------------------------------Home page ----------------------------------------*/
+/*----------------------------------END Home page -------------------------------------*/

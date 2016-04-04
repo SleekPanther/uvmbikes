@@ -1,10 +1,12 @@
 <?php include("../non-pages/php-include/top.php"); ?>
 <main>
     <div class="widthContainer">
+        <article><h1 class="cent"><?php echo $navTitle; ?></h1></article>
+    </div>
+    <div class="widthContainer">
         <div class="colContainer">
             <div class="twoCol">
                 <article>
-                    <h1><?php echo $navTitle; ?></h1>
                     <p>Stay up to date with out most current developments on our <a href="https://www.facebook.com/UVMBIKES">facebook page</a></p>
                     <p>Get your hands dirty and learn how to fix your own bike.</p>
                     <p>From Time to time we offer FREE introductory bicycle maintenance workshops for UVM Community members.</p>
