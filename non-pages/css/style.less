@@ -225,25 +225,15 @@ th{
         margin-right: 1em;
     }
 }
-//need less if statement to calculate based on screen size
-.fbPageEmbedContainer{
-    width: 300px;
-}
-/* This element holds injected scripts inside iframes that in some cases may stretch layouts. So, we're just hiding it. 
-#fb-root {
-  display: none;
-}
 
- To fill the container and nothing else 
-.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
-  width: 100% !important;
-}*/
-
-/*.fb-page, 
-.fb-page span, 
-.fb-page span iframe[style] { 
-    width: 100% !important; 
-}*/
+.fbPageEmbedContainer{      /*default styles are 590px on small screens. 590 is the max */
+    width: 590px;
+}
+@media (min-width: 800px){
+    .fbPageEmbedContainer{
+        width: 300px;       /*make it thinner on large pages (when 2-column is active) */
+    }
+}
 /*----------------------------------END contact page -------------------------------------*/
 /*-------------------------------Contact page ----------------------------------------*/
 
