@@ -52,7 +52,7 @@ ul, ol {
     margin: 0;
 }
 p{
-    margin: 0 0 .5em 0;
+    margin: .4em  0 .2em 0;
 }
 
 /*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here
@@ -149,6 +149,9 @@ img {       /* make images take up fil width of figcontainers */
         width: auto;
     }
 }
+figure{
+    margin: 0;  /*remove browser defaults */
+}
 /*id's for specific images */
 figcaption{
     
@@ -212,6 +215,12 @@ th{
 /*-------------------------------Contact page ----------------------------------------*/
 .contactLink{
     .smallLeftIndent;
+}
+.facebookFoot{
+    div.fbLabel{    /*give some padding to FaceBook Label "Like us on Facebook" next to the embedded iframe */
+        float: left;
+        margin-right: 1em;
+    }
 }
 /*----------------------------------END contact page -------------------------------------*/
 /*-------------------------------Contact page ----------------------------------------*/

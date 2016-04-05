@@ -7,7 +7,23 @@
                     <p>105 Carrigan Dr, Burlington, VT</p>
                     <p><a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a></p>
                     <div class="facebookFoot">
-                        like/share on facebook (widget)
+                        
+                        <!--loading facebook part -->
+                        <div id="fb-root"></div>
+                        <script>(function(d, s, id) {
+                            var js, fjs = d.getElementsByTagName(s)[0];
+                            if (d.getElementById(id)) return;
+                            js = d.createElement(s); js.id = id;
+                            js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+                            fjs.parentNode.insertBefore(js, fjs);
+                            }(document, 'script', 'facebook-jssdk'));
+                        </script>
+                        <!-- end loading-->
+                        
+                        <div class='fbLabel'>Like us on Facebook</div>
+                        <!-- actual embedded part -->
+                        <div class="fb-like" data-href="https://www.facebook.com/UVMBIKES/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
+                        <!-- end facebook embed -->
                     </div>
                 </article>
             </div>

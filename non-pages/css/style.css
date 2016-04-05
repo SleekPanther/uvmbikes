@@ -81,7 +81,7 @@ ol {
   margin: 0;
 }
 p {
-  margin: 0 0 .5em 0;
+  margin: .4em  0 .2em 0;
 }
 /*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here
 Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
@@ -181,6 +181,10 @@ img {
   /*overrides 100% width for images in the logo nav */
   width: auto;
 }
+figure {
+  margin: 0;
+  /*remove browser defaults */
+}
 /*id's for specific images */
 /*--------------------------------EndImages sizing -------------------------------------*/
 /* ----------------------- Iframes (maps & calendars) ---------------------------------- */
@@ -243,6 +247,11 @@ th {
 /*-------------------------------Contact page ----------------------------------------*/
 .contactLink {
   text-indent: 1em;
+}
+.facebookFoot div.fbLabel {
+  /*give some padding to FaceBook Label "Like us on Facebook" next to the embedded iframe */
+  float: left;
+  margin-right: 1em;
 }
 /*----------------------------------END contact page -------------------------------------*/
 /*-------------------------------Contact page ----------------------------------------*/
