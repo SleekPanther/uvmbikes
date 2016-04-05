@@ -97,6 +97,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- for mobile friendly -->
     <link href='<?php echo $upFolderPlaceholder ?>non-pages/css/menu.css' rel='stylesheet' type='text/css' media='screen' />
     <link href='<?php echo $upFolderPlaceholder ?>non-pages/css/style.css' rel='stylesheet' type='text/css' media='screen' />
+    <link href='<?php echo $upFolderPlaceholder ?>non-pages/css/print.css' rel='stylesheet' type='text/css' media='print' />
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script> <!-- link galleria script. Doesn't work without jQuery. -->
     <script src="<?php echo $upFolderPlaceholder ?>non-pages/galleria/galleria-1.4.2.min.js"></script>    <!-- these 2 scripts go before the galleria div & actually running goes AFTER -->

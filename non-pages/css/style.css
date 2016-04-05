@@ -2,6 +2,9 @@
   /*border for boxes, 4 sides */
   border: 1px solid black;
 }
+.smallLeftIndent {
+  text-indent: 1em;
+}
 /*------------------------- general syles & global positioning ---------------------- */
 body {
   margin: 0;
@@ -21,7 +24,7 @@ body {
 }
 h1 {
   font-size: 1.8em;
-  margin: .2em 0;
+  margin: .3em 0 .1em 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -29,7 +32,7 @@ h1 {
 }
 h2 {
   font-size: 1.6em;
-  margin: .2em 0;
+  margin: .3em 0 .1em 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -37,7 +40,7 @@ h2 {
 }
 h3 {
   font-size: 1.4em;
-  margin: .2em 0;
+  margin: .3em 0 .1em 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -45,7 +48,7 @@ h3 {
 }
 h4 {
   font-size: 1.2em;
-  margin: .2em 0;
+  margin: .3em 0 .1em 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -53,7 +56,7 @@ h4 {
 }
 h5 {
   font-size: 1em;
-  margin: .2em 0;
+  margin: .3em 0 .1em 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -61,7 +64,7 @@ h5 {
 }
 h6 {
   font-size: 0.8em;
-  margin: .2em 0;
+  margin: .3em 0 .1em 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -237,5 +240,10 @@ th {
   text-align: center;
 }
 /* -------------------------------- end Hours --------------------------------------*/
-/*-------------------------------Home page ----------------------------------------*/
-/*----------------------------------END Home page -------------------------------------*/
+/*-------------------------------Contact page ----------------------------------------*/
+.contactLink {
+  text-indent: 1em;
+}
+/*----------------------------------END contact page -------------------------------------*/
+/*-------------------------------Contact page ----------------------------------------*/
+/*----------------------------------END contact page -------------------------------------*/
