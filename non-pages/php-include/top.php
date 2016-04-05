@@ -10,7 +10,9 @@
         <![endif]-->
         
         <?php
-//=============IMPORTANT "assignment7" is the root directory==========================
+//=============IMPORTANT the variable $ROOT_DIRECTORY must be where the project is housed. ==========================
+//=============SO $ROOT_DIRECTORY must match the name of the directory wherer the homepage index.is located==========================
+        $ROOT_DIRECTORY = "assignment7";
         
         //Magical code to display errors
         //error_reporting(E_ALL);           //longer version not needed?
@@ -41,7 +43,7 @@
         
         $baseLevelIndex = 0;        //used to find the "base directory" in the url. If the site's home is in "topLevel/level1/level2/__" then it's 3 folders down, so everything should relae the the url array from index 2
         for ($i = 0; $i < count($split_url); $i++){     //loop through the URL
-            if ($split_url[$i] == "assignment7"){       //SUPER IMPORTANT (change this to match the BASE folder that the site lives inside)
+            if ($split_url[$i] == $ROOT_DIRECTORY){       //SUPER IMPORTANT (change this to match the BASE folder that the site lives inside)
                 $baseLevelIndex = $i;
             }
         }
@@ -78,8 +80,8 @@
         ?>
 <title><?php echo $navTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
     <?php        
-        //IMPORTANT "assignment7" is the root directory
-        $pageArray = array( "assignment7", "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
+        //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
+        $pageArray = array( $ROOT_DIRECTORY, "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
         $activePageArray = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
 
         $activePageArray = array_fill_keys($pageArray, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
