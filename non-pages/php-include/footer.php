@@ -8,7 +8,7 @@
                     <p><a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a></p>
                     <div class="facebookFoot">
                         
-                        <!--loading facebook part -->
+                        <!--loading facebook part --
                         <div id="fb-root"></div>
                         <script>(function(d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
@@ -18,12 +18,12 @@
                             fjs.parentNode.insertBefore(js, fjs);
                             }(document, 'script', 'facebook-jssdk'));
                         </script>
-                        <!-- end loading-->
+                        !-- end loading-->
                         
                         <div class='fbLabel'>Like us on Facebook</div>
-                        <!-- actual embedded part -->
+                        <!-- actual embedded part --
                         <div class="fb-like" data-href="https://www.facebook.com/UVMBIKES/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
-                        <!-- end facebook embed -->
+                        !-- end facebook embed -->
                     </div>
                 </article>
             </div>
