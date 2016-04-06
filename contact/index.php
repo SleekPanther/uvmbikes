@@ -10,10 +10,13 @@
                     <h2>Club Questions (wording)</h2>
                     <p>Contact:</p>
                         <p class="contactLink">Benito Cecenas <a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a></p>
-                        <p> to be added to our newsletter for info on hours & events (No spam, we promise)</p>
+                        <p>Also sign up to our mailing list for info on hours & events (No spam, we promise)</p>
+                    
+                    <div class="subSec">
                     <h3>Website Issues/Bugs</h3>
                     <p>Contact:</p>
                         <p class="contactLink">Noah Patullo <a href="mailto:macrobyte2+bikes@gmail.com">Macrobyte2+bikes@gmail.com</a></p>
+                    </div>
                         
                     <div class='subSec'>
                         <div id="fb-root"></div>

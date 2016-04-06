@@ -24,9 +24,14 @@
             <div class="twoCol">
                 <article>
                     <h2>History</h2>
-                    <p>Founded in 2010 as "Bike Users Group" as a people who ..., we have since updated our name to "UVM Bikes" but retain our mission to serve ...</p>
-                    <p></p>
-
+                    <p>In 2010, "Bike Users Group" was founded with a with a mission to provide free bikes for everyone at UVM as well as bike education.</p>
+                    <p>In 2006, UVM student Ben Sarle launches Yellow Bike Project with 30 free yellow bikes in the same fashion. With no way of tracking the bicycles he released, the bikes were soon gone or broken down.</p>
+                    <p>The Bike Users Group noticed the excess of unused, dilapidated bikes on campus.</p>
+                    <p>Members were spurred on by the success of similar program at other universities and went forward with a new system.</p>
+                    <p>The new program was more accountable. Bikes were linked to the student’s CatCard and fines if the bike went missing. It started with 3 hubs and 17 bikes and has grown extensively.</p>
+                    <p>Bikes were maintained by members of the club, which has evolved into the bike shop we have today.</p>
+                    <p>We have since updated our name to "UVM Bikes" but retain our mission and values.</p>
+                    
                     <h2>Awards</h2>
                     <p>Bicycle Friendly University Bronze, 2011</p>
                 </article>

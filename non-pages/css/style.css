@@ -24,7 +24,7 @@ body {
 }
 h1 {
   font-size: 1.8em;
-  margin: .3em 0 .1em 0;
+  margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -32,7 +32,7 @@ h1 {
 }
 h2 {
   font-size: 1.6em;
-  margin: .3em 0 .1em 0;
+  margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -40,7 +40,7 @@ h2 {
 }
 h3 {
   font-size: 1.4em;
-  margin: .3em 0 .1em 0;
+  margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -48,7 +48,7 @@ h3 {
 }
 h4 {
   font-size: 1.2em;
-  margin: .3em 0 .1em 0;
+  margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -56,7 +56,7 @@ h4 {
 }
 h5 {
   font-size: 1em;
-  margin: .3em 0 .1em 0;
+  margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
@@ -64,11 +64,15 @@ h5 {
 }
 h6 {
   font-size: 0.8em;
-  margin: .3em 0 .1em 0;
+  margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
   /*classes to easily add bold or italic */
   font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
+}
+h1 {
+  /*no bottom margin on h1's since they's only used for page titles & have a bottom border */
+  margin: 0;
 }
 .widthContainer article h1:first-child {
   /*put a border on the 1st h1 on each page, (the page name)) */
@@ -85,7 +89,7 @@ main ul li {
   margin: .8em 0;
 }
 p {
-  margin: .4em  0 .2em 0;
+  margin: 0 0 .7em 0;
 }
 /*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here
 Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
