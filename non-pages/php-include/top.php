@@ -11,7 +11,7 @@
         
         <?php
 //=============IMPORTANT the variable $ROOT_DIRECTORY must be where the project is housed. ==========================
-//=============SO $ROOT_DIRECTORY must match the name of the directory wherer the homepage index.is located==========================
+//=============So $ROOT_DIRECTORY must match the name of the directory wherer the homepage index.is located==========================
         $ROOT_DIRECTORY = "assignment7";
         
         //Magical code to display errors

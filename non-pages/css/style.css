@@ -94,7 +94,8 @@ colContainer is like a row, & inside 2 divs get classes "twoCol". They float lef
 colContainer is optional when only working with one "row" (like in the footer where there are just 2 columns)
 Using a min-width approach for media queries, I start with the smallest screens, then @ a certain size, style for the larger screen  
 The sections that contain widthContainers MUST HAVE overflow: auto or hidden (this is because the twoCol floated elements take up no height)
-each piece of content is inside an <article> which has padding. This is to full-width content can also have padding (not just twoCol)*/
+each piece of content is inside an <article> which has padding. This is to full-width content can also have padding (not just twoCol)
+The class "subSec" gives some extra padding for multiple sections in 1 column. Really only is needed for the 2nd article in a column  */
 /* width & positioning classes */
 .twoCol {
   /*using a min-width approach it starts off 100% & is changed later */
@@ -116,6 +117,7 @@ each piece of content is inside an <article> which has padding. This is to full-
 .subSec {
   /*give some extra room on the top of sub sections in the same article */
   margin: 2em 0 0 0;
+  /*Really only is needed for the 2nd article in a column */
 }
 /*media queries on small screen to fix columns & mkae full width */
 @media (min-width: 800px) {
@@ -270,5 +272,5 @@ th {
   width: 300px;
 }
 /*----------------------------------END contact page -------------------------------------*/
-/*-------------------------------Contact page ----------------------------------------*/
-/*----------------------------------END contact page -------------------------------------*/
+/*------------------------------- page ----------------------------------------*/
+/*----------------------------------END  page -------------------------------------*/
