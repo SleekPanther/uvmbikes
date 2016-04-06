@@ -80,6 +80,10 @@ ul,
 ol {
   margin: 0;
 }
+main ul li {
+  /* put some space between list items, but only those in the actual content section (contained in <main>) */
+  margin: .8em 0;
+}
 p {
   margin: .4em  0 .2em 0;
 }

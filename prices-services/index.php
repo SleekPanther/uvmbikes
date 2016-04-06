@@ -35,6 +35,7 @@
                     
                     <h2>Bike Share</h2>
                     <p>Ride for free!</p>
+                    <p>Lock it up at one of the three hubs on campus</p>
                     <p>One simple sign-up, and you can have access to a bike year round!</p>
                     <p>Come by the Davis Center to get your wheels today.</p>
                     
