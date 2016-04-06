@@ -28,7 +28,7 @@
                         
                         <div class='fbPageEmbedContainer'><!-- facebook embed must have a container width in px NOT %, so media queries govern size-->
                             <div class="fb-page" data-href="https://www.facebook.com/UVMBIKES/" data-tabs="timeline" data-width="590px" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
-                                <div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/UVMBIKES/"><a href="https://www.facebook.com/UVMBIKES/">UVM Bikes</a></blockquote></div>
+                                <div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/UVMBIKES/"><a href="https://www.facebook.com/UVMBIKES/">UVM Bikes Facebook Page</a></blockquote></div>
                             </div>
                         </div>
                     </div>

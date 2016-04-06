@@ -20,6 +20,9 @@
                     </ul>
                     <h2>More Advanced Repairs</h2>
                     <p>Need more? No worries. We're here to help you with anything, from cassette replacement to new bottom brackets or a big overhaul.</p>
+                    <h2>Use Our Shop</h2>
+                    <p>Already have experience in a bike shop?</p>
+                    <p>Work on your bike with our tools if you don’t have any. Just stop by we’re open to take advantage of our array of tools.</p>
                     <p></p>
                 </article>
             </div>
@@ -29,10 +32,19 @@
                     <p>Get your own bike for the semester. Rent a bicycle for $30 for the semester, or $50 for the year. Come on in to the Bike Center to pick one up. Choose from our selection of road, hybrid, and mountain bikes for your favorite type of riding.</p>
                     <h4>Biking preferences change with the weather?</h4>
                     <p>Exchange your rental for a more suitable ride in the warm and cold months.</p>
+                    
                     <h2>Bike Share</h2>
                     <p>Ride for free!</p>
                     <p>One simple sign-up, and you can have access to a bike year round!</p>
                     <p>Come by the Davis Center to get your wheels today.</p>
+                    
+                    <div class="subSec">
+                        <figure id="imgDonate-prices">
+                            <img src ="<?php echo $upFolderPlaceholder; ?>images/prices-services/donate.png" alt="Donate & ReCycle">
+                        </figure>
+                        <h2>Don’t just abandon, Donate!</h2>
+                        <p>We will refurbish donations for student use next year!</p>
+                    </div>
                 </article>
             </div>
         </div>
