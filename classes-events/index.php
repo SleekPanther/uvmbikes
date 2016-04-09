@@ -8,10 +8,11 @@
             <div class="twoCol">
                 <article>
                     <h2>Learn About Bikes</h2>
-                    <p>Stay up to date with out most current developments on our <a href="https://www.facebook.com/UVMBIKES">facebook page</a></p>
+                    <p>Stay up to date with out most current developments on our <a href="https://www.facebook.com/UVMBIKES">Facebook page</a></p>
                     <p>Get your hands dirty and learn how to fix your own bike.</p>
                     <p>From Time to time we offer FREE introductory bicycle maintenance workshops for UVM Community members.</p>
-                    <h4>Beginner Level</h4>
+                    
+                    <h4>Beginner Level Classes</h4>
                     <p>Class are geared for someone that is new to bicycle maintenance and is interested in learning the fundamentals that are key to proper bicycle maintenance.</p>
                 </article>
             </div>
@@ -39,8 +40,8 @@
                 ?>
                 
                 <article>
-                    <h2>Secondary title?</h2>
-                    <p>Previous workshops have included the following</p>
+                    <h2>Previous Workshops</h2>
+                    <p>Previous workshops have included the following:</p>
                     <ul>
                         <li>Bicycle vocabulary and names of components</li>
                         <li>Overview of different systems that make the bike go and stop</li>

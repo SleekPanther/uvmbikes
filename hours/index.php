@@ -12,10 +12,13 @@
                 }
             ?>
             <table>
-            <?php            
+            <?php
+            echo print_r($currentDayHoursTableActiveArray);
                 echo "\t<tr>\n";        //start table row for headers  (Sunday, Monday ...
                 for($i = 0; $i < 7; $i++){       //go from 0 to 7 (just in canse there's any extra text in the row, only bother pringing the 1st 7 days)
-                    echo "\t\t\t<th>",
+                    
+                    echo "\t\t\t<th class=\"" . $currentDayHoursTableActiveArray[$hoursFileContents[0][$i]] . "\">",
+                    //echo "\t\t\t<th class=\"". $currentDayHoursTableActiveArray['Saturday'] .">",
                             $hoursFileContents[0][$i],      //print the 1st row, & all elements in the row
                         "</th>\n";
                 }
@@ -23,7 +26,7 @@
                 
                 echo "\t\t<tr>\n";          //print the actual hours using a td instead of th
                 for($i = 0; $i < 7; $i++){
-                    echo "\t\t\t<td>",
+                    echo "\t\t\t<td class=\"" . $currentDayHoursTableActiveArray[$hoursFileContents[0][$i]] . "\">",
                             $hoursFileContents[1][$i],
                         "</td>\n";
                 }

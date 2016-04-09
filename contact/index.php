@@ -7,7 +7,7 @@
         <div class="colContainer">
             <div class="twoCol">
                 <article>
-                    <h2>Club Questions (wording)</h2>
+                    <h2>General Questions</h2>
                     <p>Contact:</p>
                         <p class="contactLink">Benito Cecenas <a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a></p>
                         <p>Also sign up to our mailing list for info on hours & events (No spam, we promise)</p>

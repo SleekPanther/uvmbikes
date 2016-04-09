@@ -209,6 +209,8 @@ figure#imgDonate-prices {
 iframe {
   border: 0;
   display: block;
+  margin: 0 0 1em 0;
+  /* give some margin on the bottom, but remove everywhere else */
 }
 iframe.map {
   width: 100%;
@@ -255,6 +257,9 @@ th {
 }
 #prices-services tr:hover {
   background: white;
+}
+.currentDayHoursTable {
+  background: orange;
 }
 /* ------------------------------- Hours --------------------------------------*/
 #hours th,

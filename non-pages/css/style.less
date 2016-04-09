@@ -177,6 +177,7 @@ figcaption{
 iframe {
     border: 0;
     display: block;
+    margin: 0 0 1em 0;  /* give some margin on the bottom, but remove everywhere else */
     &.map{
         width:100%;
         height: 20em;
@@ -214,11 +215,14 @@ th{
     table tr:nth-child(1) th, table tr:nth-child(2) th {    /*give border for the 1st 2 rows */
         .thinBlackBorderAll;
     }
+    
     tr:hover{
         background: white;
     }
 }
-
+.currentDayHoursTable{
+    background: orange;
+}
 /* ------------------------------- Hours --------------------------------------*/
 #hours {
     th,td {

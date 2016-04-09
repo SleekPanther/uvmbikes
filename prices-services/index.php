@@ -8,6 +8,8 @@
         <div class="colContainer">
             <div class="twoCol">
                 <article>
+                    <h2>Free Labor</h2>
+                    <p>We are volunteer-run and don't charge for labor. We aim to reuse parts when possible or give you good deals on new parts.</p>
                     <h2>Common Repairs</h2>
                     <ul>
                         <li>Pump your tires</li>
@@ -16,7 +18,7 @@
                         <li>Adjust shifting</li>
                         <li>Tighten brakes</li>
                         <li>New Shift/Brake housing</li>
-                        <li></li>
+                        <li>General Tune-up</li>
                     </ul>
                     <h2>More Advanced Repairs</h2>
                     <p>Need more? No worries. We're here to help you with anything, from cassette replacement to new bottom brackets or a big overhaul.</p>
@@ -28,6 +30,9 @@
             </div>
             <div class="twoCol">
                 <article>
+                    <h2>Become A Volunteer</h2>
+                    <p><a href="<?php echo $upFolderPlaceholder; ?>contact/index.php">Contact us</a> to join the club. Sign up become a volunteer at the shop. Share you bike knowledge or learn brand new skills if you've never worked on bikes.</p>
+                    
                     <h2>Bike Rentals</h2>
                     <p>Get your own bike for the semester. Rent a bicycle for $30 for the semester, or $50 for the year. Come on in to the Bike Center to pick one up. Choose from our selection of road, hybrid, and mountain bikes for your favorite type of riding.</p>
                     <h4>Biking preferences change with the weather?</h4>
@@ -37,7 +42,8 @@
                     <p>Ride for free!</p>
                     <p>Lock it up at one of the three hubs on campus</p>
                     <p>One simple sign-up, and you can have access to a bike year round!</p>
-                    <p>Come by the Davis Center to get your wheels today.</p>
+                    <p>Come by the <span class='b'>Davis Center first floor info desk</span> to get your wheels today. <br>
+                        <a href='https://www.uvm.edu/tps/transportation/bike/'>More info</a></p>
                     
                     <div class="subSec">
                         <figure id="imgDonate-prices">
