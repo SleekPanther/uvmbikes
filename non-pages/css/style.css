@@ -91,14 +91,14 @@ main ul li {
 p {
   margin: 0 0 .7em 0;
 }
-/*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here
-Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width
+/*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here.
+Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width.
 For columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
-colContainer is like a row, & inside 2 divs get classes "twoCol". They float left/right on big screens then span the entire width on small screens
+colContainer is like a row, & inside 2 divs get classes "twoCol". They float left on big screens then span the entire width on small screens
 colContainer is optional when only working with one "row" (like in the footer where there are just 2 columns)
 Using a min-width approach for media queries, I start with the smallest screens, then @ a certain size, style for the larger screen  
 The sections that contain widthContainers MUST HAVE overflow: auto or hidden (this is because the twoCol floated elements take up no height)
-each piece of content is inside an <article> which has padding. This is to full-width content can also have padding (not just twoCol)
+Each piece of content is inside an <article> which has padding. This is to full-width content can also have padding (not just twoCol)
 The class "subSec" gives some extra padding for multiple sections in 1 column. Really only is needed for the 2nd article in a column  */
 /* width & positioning classes */
 .twoCol {
@@ -125,7 +125,7 @@ The class "subSec" gives some extra padding for multiple sections in 1 column. R
 }
 /*media queries on small screen to fix columns & mkae full width */
 @media (min-width: 800px) {
-  /* these are actually what you see on big screens */
+  /* these are actually what you see most of the time on big screens */
   .twoCol {
     width: 50%;
     float: left;
@@ -136,11 +136,9 @@ The class "subSec" gives some extra padding for multiple sections in 1 column. R
     width: 70%;
   }
 }
-.todayHours {
-  /*initially these don't float at all, but are changed later */
-  float: none;
-}
+.todayHours,
 .tinyLocation {
+  /*style for small screens: no float, so they don't overlap. (changed later) */
   float: none;
 }
 @media (min-width: 1000px) {
@@ -161,7 +159,7 @@ footer,
 }
 .colContainer {
   clear: both;
-  /* this is important, so that multiple columns don't all go right */
+  /* this is important, so that multiple columns don't all go to the right */
 }
 /*------------------------- end positioning/layout section -------------------------*/
 /*-------------------------color of page secions ---------------------------------*/
@@ -170,6 +168,7 @@ footer,
 }
 .galleria {
   height: 350px;
+  /*galleria mus have a px height, % doesn't work */
 }
 .galleria-theme-classic {
   /*change stage background color */
@@ -184,12 +183,14 @@ main {
 footer {
   background: lightYellow;
   font-size: .8em;
+  /*make the footer font a little smaller */
 }
 /*-------------------------END "color of page" secions -----------------------------*/
 /*----------------------------Images sizing --------------------------------------------*/
 img {
-  /* make images take up fil width of figcontainers */
+  /* make images take up fil width of their figcontainers */
   width: 100%;
+  /*height is still auto so aspect ratio is preserved as long as the figaption has a set width*/
 }
 #logo img {
   /*overrides 100% width for images in the logo nav */
@@ -203,7 +204,6 @@ figure {
 figure#imgDonate-prices {
   width: 50%;
 }
-/*id's for specific images */
 /*--------------------------------EndImages sizing -------------------------------------*/
 /* ----------------------- Iframes (maps & calendars) ---------------------------------- */
 iframe {
@@ -211,6 +211,7 @@ iframe {
   display: block;
   margin: 0 0 1em 0;
   /* give some margin on the bottom, but remove everywhere else */
+  /*some specific sizing for the different iframes */
 }
 iframe.map {
   width: 100%;
@@ -229,15 +230,17 @@ table {
 }
 th,
 td {
+  /*give cells a border & some padding */
   /*border for boxes, 4 sides */
   border: 1px solid black;
-  /*give cells a border */
   padding: .2em;
 }
 th {
+  /*make sure table headers are centered */
   text-align: center;
 }
 /*--------------------------- end table style ---------------------------------*/
+/*------------------------------- Prices/Services page ----------------------------------------*/
 #prices-services td,
 #prices-services th {
   width: 50%;
@@ -258,14 +261,16 @@ th {
 #prices-services tr:hover {
   background: white;
 }
-.currentDayHoursTable {
-  /*give a highlight background to the current day in the table */
-  background: orange;
-}
+/*------------------------------- End /Services page ----------------------------------------*/
 /* ------------------------------- Hours --------------------------------------*/
 #hours th,
 #hours td {
+  /*make all cells cented on the hours page */
   text-align: center;
+}
+.currentDayHoursTable {
+  /*give a highlight background to the current day in the table */
+  background: orange;
 }
 /* -------------------------------- end Hours --------------------------------------*/
 /*-------------------------------Contact page ----------------------------------------*/
