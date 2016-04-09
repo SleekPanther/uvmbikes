@@ -274,7 +274,8 @@ th {
 }
 .currentDayHoursTable {
   /*give a highlight background to the current day in the table */
-  background: orange;
+  background: #66E9E4;
+  /*color matches the headerInfo color */
 }
 /* -------------------------------- end Hours --------------------------------------*/
 /*-------------------------------Contact page ----------------------------------------*/
