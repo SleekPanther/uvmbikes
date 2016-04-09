@@ -9,7 +9,11 @@
 body {
   margin: 0;
   font-size: 1.3em;
-  background: tan;
+  background: #CBF3D0;
+}
+a:hover,
+a:focus {
+  text-decoration: none;
 }
 .b {
   /*classes to easily add bold or italic */
@@ -164,7 +168,7 @@ footer,
 /*------------------------- end positioning/layout section -------------------------*/
 /*-------------------------color of page secions ---------------------------------*/
 .headerInfo {
-  background: lightBlue;
+  background: #66E9E4;
 }
 .galleria {
   height: 350px;
@@ -172,16 +176,16 @@ footer,
 }
 .galleria-theme-classic {
   /*change stage background color */
-  background: Orange;
+  background: #539D5C;
 }
 .slideshow {
-  background: Orange;
+  background: #539D5C;
 }
 main {
-  background: tan;
+  background: #CBF3D0;
 }
 footer {
-  background: lightYellow;
+  background: #AAE6E6;
   font-size: .8em;
   /*make the footer font a little smaller */
 }
