@@ -40,7 +40,6 @@
                 </article>
             </div>
         </div>
-    &nbsp;<!-- need some content, or the box is 0px tall (all floated) -->
     </div>
 </footer>
 <!-- end footer.php -->

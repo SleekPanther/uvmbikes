@@ -13,6 +13,7 @@ body {
 }
 a:hover,
 a:focus {
+  /*some link styles for hover & focus*/
   text-decoration: none;
 }
 .b {
@@ -144,6 +145,14 @@ The class "subSec" gives some extra padding for multiple sections in 1 column. R
 .tinyLocation {
   /*style for small screens: no float, so they don't overlap. (changed later) */
   float: none;
+}
+.todayHours .todayHoursActualContent,
+.tinyLocation .todayHoursActualContent {
+  /*add some styles to the header hours, so they're differentiated for 'Hours Today: __' */
+  /*        .b;
+        border-radius: 1em;
+        padding: 0 .7em;
+        background: white;*/
 }
 @media (min-width: 1000px) {
   /* these are actually what you see on big screens */
