@@ -1,5 +1,4 @@
 <?php include("../non-pages/php-include/top.php"); ?>
-<main>
     <div class="widthContainer">
         <article><h1 class="cent"><?php echo $navTitle; ?></h1></article>
     </div>
@@ -19,7 +18,7 @@
                     </div>
                         
                     <div class='subSec'>
-                        <div id="fb-root"></div>
+                        <!--<div id="fb-root"></div>--><!-- this was facebeook's embed, but since don't want to duplicate if since already in footer -->
                         <script>(function(d, s, id) {
                             var js, fjs = d.getElementsByTagName(s)[0];
                             if (d.getElementById(id)) return;

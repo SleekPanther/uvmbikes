@@ -30,4 +30,6 @@ for($i =0; $i< count($daysRow); $i++){      //loop through the days array
     <?php include ($upFolderPlaceholder . "non-pages/php-include/galleria-images.php"); ?>
 
 </header>
+
+<main id="actualMainContent"><!-- this div begins the actual content but is actually in header.php -->
 <!-- end header.php -->

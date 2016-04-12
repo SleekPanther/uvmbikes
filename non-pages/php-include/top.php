@@ -114,7 +114,7 @@
             echo '<body id="'.$containing_folder.'">';
         }
     ?>
-    
+    <p class="skipToContent"><a href="#actualMainContent">Skip to Main Content</a></p><!-- accessibility skip button, positioned off screen -->
     <?php
         include ($upFolderPlaceholder."non-pages/php-include/nav.php");
         include ($upFolderPlaceholder."non-pages/php-include/header.php");

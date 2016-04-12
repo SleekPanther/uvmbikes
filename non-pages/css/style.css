@@ -27,6 +27,10 @@ a:focus {
   /*shorthand class to center text */
   text-align: center;
 }
+.skipToContent {
+  position: absolute;
+  top: 200px;
+}
 h1 {
   font-size: 1.8em;
   margin: .6em 0 0 0;
@@ -97,6 +101,7 @@ p {
   margin: 0 0 .7em 0;
 }
 /*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here.
+    all <main> elements start in header.php & have id="actualMainContent" for accessibility "skip to main content" link
 Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width.
 For columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
 colContainer is like a row, & inside 2 divs get classes "twoCol". They float left on big screens then span the entire width on small screens
