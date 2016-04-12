@@ -1,5 +1,6 @@
 <section class="slideshow">
     <div class="widthContainer">
+        <p class="galleriaHackP">&nbsp;</p><!--fix galleria stage no height (only Liam & homepage)-->
         <!-- Galleria section -->
         <div class='galleria'>
         <?php

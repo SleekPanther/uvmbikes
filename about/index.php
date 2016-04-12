@@ -33,7 +33,8 @@
                     <p>We have since updated our name to "UVM Bikes" but retain our mission and values.</p>
                     
                     <h2>Awards</h2>
-                    <p>Bicycle Friendly University Bronze, 2011</p>
+                    <p>Bicycle Friendly University Bronze, 2011<br>
+                        <a href="http://www.uvm.edu/sustain/news-events/news/uvm-receives-silver-for-bicycle-friendly-university">Read More</a></p>
                 </article>
             </div>
         </div>

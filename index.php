@@ -21,7 +21,7 @@
                     <p>We provide access to wheels on campus to those that need them. <a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">Learn more</a></p>
                     
                     <h2>Spread The Word</h2>
-                    <p>We are funded through <a href="http://www.uvm.edu/sga/">The Student Government Association</a>. We need to show that we're an active club, so tell your fiends.</p>
+                    <p>We are funded through <a href="http://www.uvm.edu/sga/">The Student Government Association</a>. We need to show that we're an active club, so tell your friends.</p>
                 </article>
             </div>
             <div class="twoCol">

@@ -183,6 +183,9 @@ footer,
   height: 350px;
   /*galleria mus have a px height, % doesn't work */
 }
+.galleriaHackP {
+  /*weird hack to fix galleria not loading*/
+}
 .galleria-theme-classic {
   /*change stage background color */
   background: #539D5C;
