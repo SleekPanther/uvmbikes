@@ -32,9 +32,10 @@ a:hover, a:focus{       /*some link styles for hover & focus*/
 .cent{      /*shorthand class to center text */
     text-align: center;
 }
-.skipToContent{
+.skipToContent{     /*hides something from sighted users. Position absolute removes from flow, negative left sends way off screen, top:auto=just in case left is ignored, sometimes need both */
     position:absolute;
-    top: 200px;
+    left:-10000px;
+    top:auto;
 }
 
 // http://stackoverflow.com/questions/24123195/less-css-nested-loops-for-header-elements

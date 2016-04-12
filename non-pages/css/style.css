@@ -28,8 +28,10 @@ a:focus {
   text-align: center;
 }
 .skipToContent {
+  /*hides something from sighted users. Position absolute removes from flow, negative left sends way off screen, top:auto=just in case left is ignored, sometimes need both */
   position: absolute;
-  top: 200px;
+  left: -10000px;
+  top: auto;
 }
 h1 {
   font-size: 1.8em;
