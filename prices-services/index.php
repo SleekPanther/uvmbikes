@@ -7,7 +7,7 @@
             <div class="twoCol">
                 <article>
                     <h2>Free Labor</h2>
-                    <p>We are volunteer-run and don't charge for labor. We aim to reuse parts when possible or give you good deals on new parts.</p>
+                    <p>We are volunteer-run and don't charge for labor for UVM students. We aim to reuse parts when possible or give you good deals on new parts.</p>
                     <h2>Common Repairs</h2>
                     <ul>
                         <li>Pump your tires</li>

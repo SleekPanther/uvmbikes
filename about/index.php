@@ -9,7 +9,10 @@
                         <h2>Who We Are</h2>
                         <p>We’re a student led group at UVM dedicated to spreading the good word of bicycles.</p>
                         <p>Many of our members are also on the <a href="https://www.facebook.com/UVM-Cycling-Team-283115763304/">UVM Cycling Team</a>.</p>
-
+                        
+                        <h2>Not Just a Boys Club</h2>
+                    <p>We aim to be open and inclusive and aim to encourage women to learn bike skills.</p>
+                    
                     <div class="subSec">
                         <h2>What We Do</h2>
                         <ul>

@@ -44,6 +44,12 @@
         </article>
         
         <article>
+            <h2>Want to Volunteer?</h2>
+            <p>Contact Benito Cecenas <a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a> to join the club and sign up for a shift.</p>
+            <p>You don't have to be an expert. Find a time that works and you can learn from our other volunteers.</p>
+        </article>
+        
+        <article>
             <h2>Our Volunteers</h2>
             <iframe class="volunteerCalendar" src="https://calendar.google.com/calendar/embed?mode=WEEK&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=reauks4s5avjthhqoo9sm7acks%40group.calendar.google.com&amp;color=%23AB8B00&amp;ctz=America%2FNew_York"></iframe><!-- width="800" height="600" -->
         </article>

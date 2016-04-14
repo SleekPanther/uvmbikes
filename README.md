@@ -10,3 +10,6 @@ I've spent considerable amount of time working on php in the top.php page locate
 - It has detailed comments regarding implementation of how the navigation works with `upFolderPlaceholder` so there's 1 version of nav
 - `$ROOT_DIRECTORY` is a majorly important variable. It specifies where the project is housed. Since many thins rely on looking at the containing folder, this is the highest level folder that everything else depends on. 
 - an `activePage` class is printed on the current page on the nav (so the user know's where they are)
+
+###Known Bugs
+-The Galleria slideshow occasionaly doesn't work. It has a height specified in CSS, but sometimes it thinks the containing box is 0px tall & won't load. I added an empty paragraph with "&nbsp;" before the galleria div to fix this & it seems to work.

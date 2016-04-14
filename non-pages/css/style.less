@@ -112,11 +112,16 @@ The class "subSec" gives some extra padding for multiple sections in 1 column. R
 
 .todayHours, .tinyLocation{    /*style for small screens: no float, so they don't overlap. (changed later) */
     float:none;
+}
+.todayHours {
+    a {
+        text-shadow: 0px 0px 1px black; /*give a slight shadow around text */
+    }
     .todayHoursActualContent{   /*add some styles to the header hours, so they're differentiated for 'Hours Today: __' */
-/*        .b;
+        &:extend(.b);//       //.b;      //maybe just do mixin
         border-radius: 1em;
         padding: 0 .7em;
-        background: white;*/
+        background: white;
     }
 }
 @media (min-width: 1000px){ /* these are actually what you see on big screens */
