@@ -4,13 +4,16 @@
 @contentBackground: #CBF3D0;
 @footerBackground: #AAE6E6;
 
-//mixin classes for LESS
+//mixin & extends classes for LESS
 @thinBlackBorder: 1px solid black;;
 .thinBlackBorderAll{    /*border for boxes, 4 sides */
     border: @thinBlackBorder;
 }
 .smallLeftIndent{
     text-indent: 1em;
+}
+.sans-serif{
+    font-family: arial, sans-serif;
 }
 
 /*------------------------- general syles & global positioning ---------------------- */
@@ -23,7 +26,8 @@ body {
 a:hover, a:focus{       /*some link styles for hover & focus*/
     text-decoration: none;
 }
-.b{         /*classes to easily add bold or italic */
+/*classes to easily add bold or italic */
+.b{
     font-weight: bold;
 }
 .i{
@@ -44,7 +48,8 @@ a:hover, a:focus{       /*some link styles for hover & focus*/
     h@{i} {
         font-size: (1.8em - (@i - 1) * 0.2);    //biggest heading=1.8em, the starting point
         margin: .6em 0 0 0;         /* remove default margin for heading & make it much smaller */
-        .b;     /* make sure all heading are bold, if the browser doesn't do so automatically */
+        &:extend(.b);     /* make sure all heading are bold, if the browser doesn't do so automatically */
+        &:extend(.sans-serif);
     }
     .headers-generator(@n; (@i + 1));
 }

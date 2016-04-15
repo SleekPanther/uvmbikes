@@ -5,6 +5,15 @@
 .smallLeftIndent {
   text-indent: 1em;
 }
+.sans-serif,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: arial, sans-serif;
+}
 /*------------------------- general syles & global positioning ---------------------- */
 body {
   margin: 0;
@@ -16,9 +25,15 @@ a:focus {
   /*some link styles for hover & focus*/
   text-decoration: none;
 }
+/*classes to easily add bold or italic */
 .b,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .todayHours .todayHoursActualContent {
-  /*classes to easily add bold or italic */
   font-weight: bold;
 }
 .i {
@@ -38,48 +53,36 @@ h1 {
   font-size: 1.8em;
   margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
-  /*classes to easily add bold or italic */
-  font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 h2 {
   font-size: 1.6em;
   margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
-  /*classes to easily add bold or italic */
-  font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 h3 {
   font-size: 1.4em;
   margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
-  /*classes to easily add bold or italic */
-  font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 h4 {
   font-size: 1.2em;
   margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
-  /*classes to easily add bold or italic */
-  font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 h5 {
   font-size: 1em;
   margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
-  /*classes to easily add bold or italic */
-  font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 h6 {
   font-size: 0.8em;
   margin: .6em 0 0 0;
   /* remove default margin for heading & make it much smaller */
-  /*classes to easily add bold or italic */
-  font-weight: bold;
   /* make sure all heading are bold, if the browser doesn't do so automatically */
 }
 h1 {
