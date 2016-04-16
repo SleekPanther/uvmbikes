@@ -1,6 +1,3 @@
-a[href^="http"]:after {
-  content: " \2197";
-}
 .thinBlackBorderAll {
   /*border for boxes, 4 sides */
   border: 1px solid black;
@@ -27,11 +24,17 @@ body {
   font-size: 1.3em;
   background: #CBF3D0;
 }
+/*------------------------------------ Link Styles ------------------------------------*/
 a:hover,
 a:focus {
   /*some link styles for hover & focus*/
   text-decoration: none;
 }
+a[href^="http"]:after {
+  /*target the external links. Could also have done a[target="_blank"]{} */
+  content: " \2197";
+}
+/*------------------------------------ End Link Styles --------------------------------*/
 /*classes to easily add bold or italic */
 .b,
 h1,
@@ -269,7 +272,8 @@ td {
   /*give cells a border & some padding */
   /*border for boxes, 4 sides */
   border: 1px solid black;
-  padding: .2em;
+  padding: .2em 0;
+  /*make cells a little taller by giving some head room, but none left/right */
 }
 th {
   /*make sure table headers are centered */

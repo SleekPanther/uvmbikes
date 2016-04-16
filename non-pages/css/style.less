@@ -4,10 +4,6 @@
 @contentBackground: #CBF3D0;
 @footerBackground: #AAE6E6;
 
-a[href^="http"]:after{
-    content: " \2197";
-}
-
 //mixin & extends classes for LESS
 @thinBlackBorder: 1px solid black;;
 .thinBlackBorderAll{    /*border for boxes, 4 sides */
@@ -31,9 +27,16 @@ body {
     &:extend(.serif);
     //background: @footerBackground;
 }
+
+/*------------------------------------ Link Styles ------------------------------------*/
 a:hover, a:focus{       /*some link styles for hover & focus*/
     text-decoration: none;
 }
+a[href^="http"]:after {  /*target the external links. Could also have done a[target="_blank"]{} */
+    content: " \2197";
+}
+/*------------------------------------ End Link Styles --------------------------------*/
+
 /*classes to easily add bold or italic */
 .b{
     font-weight: bold;
@@ -221,7 +224,7 @@ table {
 }
 th,td { /*give cells a border & some padding */
     .thinBlackBorderAll;   
-    padding: .2em;
+    padding: .2em 0;        /*make cells a little taller by giving some head room, but none left/right */
 }
 th{     /*make sure table headers are centered */
     text-align: center;
