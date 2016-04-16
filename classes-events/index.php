@@ -7,7 +7,7 @@
             <div class="twoCol">
                 <article>
                     <h2>Learn About Bikes</h2>
-                    <p>Stay up to date with out most current developments on our <a href="https://www.facebook.com/UVMBIKES">Facebook page</a></p>
+                    <p>Stay up to date with out most current developments on our <a href="https://www.facebook.com/UVMBIKES" target="_blank">Facebook page</a></p>
                     <p>Get your hands dirty and learn how to fix your own bike.</p>
                     <p>From Time to time we offer FREE introductory bicycle maintenance workshops for UVM Community members.</p>
                     

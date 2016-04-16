@@ -19,7 +19,7 @@
                     <p>We provide access to wheels on campus to those that need them. <a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">Learn more</a></p>
                     
                     <h2>Spread The Word</h2>
-                    <p>We are funded through <a href="http://www.uvm.edu/sga/">The Student Government Association</a>. We need to show that we're an active club, so tell your friends.</p>
+                    <p>We are funded through <a href="http://www.uvm.edu/sga/" target="_blank">The Student Government Association</a>. We need to show that we're an active club, so tell your friends.</p>
                     
                     <h2>Not Just a Boys Club</h2>
                     <p>We aim to be inclusive and aim to encourage women to learn bike skills too. We've offered women-only workshops in the past and plan to continue the series in the future. More on <a href="<?php echo $upFolderPlaceholder; ?>classes-events/index.php">Classes / Events</a></p>

@@ -41,7 +41,7 @@
                     <p>Lock it up at one of the three hubs on campus</p>
                     <p>One simple sign-up, and you can have access to a bike year round!</p>
                     <p>Come by the <span class='b'>Davis Center first floor info desk</span> to get your wheels today. <br>
-                        <a href='https://www.uvm.edu/tps/transportation/bike/'>More info</a></p>
+                        <a href='https://www.uvm.edu/tps/transportation/bike/' target="_blank">More info</a></p>
                     
                     <div class="subSec">
                         <figure id="imgDonate-prices">
