@@ -7,7 +7,7 @@
             <div class="twoCol">
                 <article>
                     <h2>Free Labor</h2>
-                    <p>We are volunteer-run and don't charge for labor for UVM students. We aim to reuse parts when possible or give you good deals on new parts.</p>
+                    <p>We are volunteer-run and don't charge for labor for UVM students. Many common repairs are free because we just need to adjust something. If it must be replaced, we aim to reuse parts or give you good deal on new ones. <a href="#price-list-table">Jump to price list &#8659;</a></p>
                     <h2>Common Repairs</h2>
                     <ul>
                         <li>Pump your tires</li>
@@ -15,8 +15,8 @@
                         <li>Oil/clean chain</li>
                         <li>Adjust shifting</li>
                         <li>Tighten brakes</li>
-                        <li>New Shift/Brake housing</li>
                         <li>General Tune-up</li>
+                        <li>New Shift/Brake housing</li>
                     </ul>
                     <h2>More Advanced Repairs</h2>
                     <p>Need more? No worries. We're here to help you with anything, from cassette replacement to new bottom brackets or a big overhaul.</p>
@@ -55,7 +55,7 @@
         </div>
 
         <article>
-            <h2 class="cent">Prices</h2>
+            <h2 class="cent" id="price-list-table">Prices</h2>
             <table>
                 <?php
                 $pricesFile = fopen($upFolderPlaceholder . "non-pages/csv/parts.csv", "r");

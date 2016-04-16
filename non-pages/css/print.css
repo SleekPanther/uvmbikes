@@ -1,0 +1,11 @@
+/* print styles mostly duplicate the look of the site & remove some stuff that shouldn't be printed
+
+*/
+body > * {
+  /*target all elements that are direct descendants of body & display: none */
+  display: none;
+}
+main {
+  /* then target the actual content & re-display it */
+  display: block;
+}

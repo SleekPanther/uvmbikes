@@ -12,7 +12,7 @@
                     <p>From Time to time we offer FREE introductory bicycle maintenance workshops for UVM Community members.</p>
                     
                     <h4>Beginner Level Classes</h4>
-                    <p>Class are geared for someone that is new to bicycle maintenance and is interested in learning the fundamentals that are key to proper bicycle maintenance.</p>
+                    <p>Classes are geared for someone that is new to bicycle maintenance and is interested in learning the fundamentals that are key to proper bicycle maintenance.</p>
                     
                     <h4>Want a Specific Class?</h4>
                     <p>If you really want to learn something contact Benito Cecenas <a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a> to see when we'll be offering new classes.</p>
