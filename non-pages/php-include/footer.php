@@ -20,7 +20,10 @@
                         </script>
                         <!-- end loading-->
                         
-                        <div class='fbLabel'>Like us on Facebook</div>
+                        <div class='fbLabel'>Like us on <figure class='imgFB-link'>
+                            <a href="https://www.facebook.com/UVMBIKES/" target='_blank'><img src="<?php echo $upFolderPlaceholder; ?>images/0components/facebook-icon.png" alt="Facebook"></a><!-- Picture Link so that anyone can get to the main facebook page, even if they're not logged in -->
+                            </figure>
+                        </div>
                         <!-- actual embedded part -->
                         <div class="fb-like" data-href="https://www.facebook.com/UVMBIKES/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>
                         <!-- end facebook embed -->

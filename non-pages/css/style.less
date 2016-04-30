@@ -197,6 +197,13 @@ figure{
     &#imgDonate-prices{
         width: 50%;
     }
+    &.imgFB-link{
+        display: inline-block;
+        width: 80px;
+        & a[href^="http"]:after{    
+            content: "";            /*remove the ascii arrow for external links */
+        }
+    }
 }
 /*--------------------------------EndImages sizing -------------------------------------*/
 

@@ -243,6 +243,14 @@ figure {
 figure#imgDonate-prices {
   width: 50%;
 }
+figure.imgFB-link {
+  display: inline-block;
+  width: 80px;
+}
+figure.imgFB-link a[href^="http"]:after {
+  content: "";
+  /*remove the ascii arrow for external links */
+}
 /*--------------------------------EndImages sizing -------------------------------------*/
 /* ----------------------- Iframes (maps & calendars) ---------------------------------- */
 iframe {
