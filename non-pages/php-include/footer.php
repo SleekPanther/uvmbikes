@@ -4,7 +4,8 @@
         <div class="colContainer">
             <div class="twoCol">
                 <article>
-                    <p>105 Carrigan Dr, Burlington, VT</p>
+                    <p>Hills Building Basement<br>
+                        105 Carrigan Dr, Burlington, VT</p>
                     <p><a href="mailto:bikesuvm@gmail.com">BikesUVM@gmail.com</a></p>
                     <div class="facebookFoot">
                         

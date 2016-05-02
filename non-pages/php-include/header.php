@@ -22,7 +22,7 @@ for($i =0; $i< count($daysRow); $i++){      //loop through the days array
         <div class="widthContainer">
             <article>
                 <div class="todayHours"><a href="<?php echo $upFolderPlaceholder; ?>hours/index.php">Hours Today:</a> <span class='todayHoursActualContent'><?php echo $todayHours; ?></span></div>
-            <div class='tinyLocation'>105 Carrigan Dr, Burlington, VT</div>
+                <div class='tinyLocation'>Hills Building Basement (next to Davis Center)</div>
             </article>
         </div>
     </section>

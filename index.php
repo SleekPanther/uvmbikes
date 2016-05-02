@@ -9,7 +9,7 @@
                     <h2>Welcome</h2>
                     <p>We are a student club providing bike repairs and promoting bicycle use at University of Vermont. Stop by to get your bike fixed.</p>
                     <h2>Free Labor</h2>
-                    <p>That's right, we're here to help you, not make money. Labor is free for UVM students and we aim to reuse parts or provide cheap ones when the need arises.</p>
+                    <p>That's right, we're not here to make money, we're here to help you. Labor is free for UVM students and we aim to reuse parts or provide cheap ones when the need arises.</p>
                     <p>Check our <a href="<?php echo $upFolderPlaceholder; ?>prices-services/index.php">Prices / Services</a> price list for common repairs. </p>
                     
                     <h2>Get Involved</h2>
