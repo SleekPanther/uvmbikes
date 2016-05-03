@@ -7,7 +7,7 @@
             <div class="twoCol">
                 <article>
                     <h2>Free Labor</h2>
-                    <p>We are volunteer-run and don't charge for labor for UVM students. Many common repairs are free because we just need to adjust something. If it must be replaced, we aim to reuse parts or give you good deal on new ones. <a href="#price-list-table">Jump to price list &#8659;</a></p>
+                    <p>We are volunteer-run and don't charge for labor for UVM students & staff. If you're not affiliated with UVM, unfortunately we can't help you due to liability issues. Many common repairs are free because we just need to adjust something. If it must be replaced, we aim to reuse parts or give you good deal on new ones. <a href="#price-list-table">Jump to price list &#8659;</a></p>
                     <h2>Common Repairs</h2>
                     <ul>
                         <li>Pump your tires</li>
