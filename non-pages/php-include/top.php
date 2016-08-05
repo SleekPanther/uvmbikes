@@ -94,7 +94,7 @@
         $activePageArrayDropDown1 = array();
         $activePageArrayDropDown2 = array();
 
-        /*
+        /*v1
         //function to analyze directoy structure & create arrays for top level pages, dropdown level 1, dropdown level 2, etc. Used to print active page
         function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, &$containing_folder){  //MUST ADD & TO PASS BY VALUE
             $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
@@ -109,13 +109,30 @@
         }
         */
         
-        function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, &$containing_folder){  //MUST ADD & TO PASS BY VALUE
+        /*v2
+        function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, $containing_folder2 ){  //MUST ADD & TO PASS BY REFERENCE for arrays
             $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
+            
+            for($i = 0; $i < count($arrayOfPages); $i++){      //loop through the page array
+                if($containing_folder2 == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
+                    $activeArrayToFill[$containing_folder2]= "activePage";     //print "activePage" in the $activeArrayToFill, at the index of "containing_folder". It's associative, so $activeArrayToFill must be accessed via a key, in this case it's the $containing_folder (or current page)
+                    break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
+                }
+            }   //at this point, $activeArrayToFill should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
+            //return $activeArrayToFill;
+        }
+         */
+        
+        //This function analyzes a level of the folder tree & dropdown to find active pages. $folderLevelToCheck is important & must match the level of the arrays that are being passed in. For instance, to analyze $pageArrayTop (the links on the top-level nav), you must pass in 0 as the 4th argument
+        function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, $split_url_adjusted2, $folderLevelToCheck){  //MUST ADD & TO PASS BY REFERENCE for arrays
+            $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
+            
+            $folderLevel=count($split_url_adjusted2);
             
             
             for($i = 0; $i < count($arrayOfPages); $i++){      //loop through the page array
-                if($containing_folder == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
-                    $activeArrayToFill[$containing_folder]= "activePage";     //print "activePage" in the $activeArrayToFill, at the index of "containing_folder". It's associative, so $activeArrayToFill must be accessed via a key, in this case it's the $containing_folder (or current page)
+                if($split_url_adjusted2[$folderLevelToCheck] == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
+                    $activeArrayToFill[ $split_url_adjusted2[$folderLevelToCheck] ]= "activePage";     //print "activePage" in the $activeArrayToFill, at the index of "containing_folder". It's associative, so $activeArrayToFill must be accessed via a key, in this case it's the $containing_folder (or current page)
                     break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
                 }
             }   //at this point, $activeArrayToFill should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
@@ -124,7 +141,8 @@
         
         
         //call the function to fill arrays
-        fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
+        fillActivePageArrays($pageArrayTop, $activePageArrayTop, $split_url_adjusted, 0);
+        //fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
         //fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $containing_folder);
         //fillActivePageArrays($pageArrayDropDown2, $activePageArrayDropDown2, $containing_folder);
     ?>
