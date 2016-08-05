@@ -40,6 +40,10 @@ nav:after {
   display: table;
   clear: both;
 }
+.menu {
+  z-index: 1;
+  /*IMPORTANT make sure menu goes on top of rest of page so dropdowns aren't hidden */
+}
 nav ul {
   float: right;
   padding: 0;
@@ -91,7 +95,7 @@ nav ul ul ul li {
   position: relative;
   /*top: -@menuHeight;*/
   /*controls how far up the 2nd level down goes up (must match height of element to offset) */
-  top: -4.4em;
+  top: -2.9em;
   /*this is a manual hack to fix how far the 2nd sub-menu goes up. For somereason -@menuHeight doesn't work. (not high enough) */
   left: 10em;
   /*must match width of nav ul ul li with the @dropDownWidth var */

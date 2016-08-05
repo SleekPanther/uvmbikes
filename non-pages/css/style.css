@@ -105,6 +105,10 @@ h1 {
   /*shorthand class to center text */
   text-align: center;
 }
+header {
+  /*IMPORTANT = makes galleria hide behind the menu dropdowns*/
+  z-index: 2;
+}
 ul,
 ol {
   margin: 0;

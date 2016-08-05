@@ -5,7 +5,7 @@
 
 //sizing variables
 @menuHeight: 3em;
-@MenuHeightCompensator: -4.4em;
+@MenuHeightCompensator: -2.9em;
 @dropDownWidth: 10em;
 @linkSpacing: 0 20px;
 
@@ -56,6 +56,10 @@ nav:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.menu {
+    z-index: 1;     /*IMPORTANT make sure menu goes on top of rest of page so dropdowns aren't hidden */
 }
 
 nav ul {
