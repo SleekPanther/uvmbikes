@@ -1,12 +1,4 @@
-<!-- nav.php -->
-<nav>
-    <div id="logo"><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; ?>><img src="<?php echo $upFolderPlaceholder;?>images/logo/logo.png" alt="UVM Bikes"><span class="logoLink">Free Campus<br>Bike Shop</span></a></div>
-        <label for="drop" class="toggle">Show/Hide Menu</label>
-        <input type="checkbox" id="drop" />
-        <ul class="menu">
-            <!-- IMPORTANT $containing_folder == $ROOT_DIRECTORY is different from all other links since it has a special parent folder. (or we don't know what the server's parent folder will be. So this must be the ver base case for comparison. -->
-            <li><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; echo ' class="'.$activePageArrayTop[$ROOT_DIRECTORY].'"'; ?>>Home</a></li>
-            <li>
+<li>
                 <!-- First Tier Drop Down -->
                 <label for="drop-2" class="toggle">Portfolio +</label>
                 <a href="#">Portfolio</a>
@@ -32,10 +24,3 @@
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'classes-events/index.php"'; echo ' class="'.$activePageArrayTop['classes-events'].'"'; ?>>Classes / Events</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'contact/index.php"'; echo ' class="'.$activePageArrayTop['contact'].'"'; ?>>Contact</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'about/index.php"'; echo ' class="'.$activePageArrayTop['about'].'"'; ?>>About</a></li>
-        </ul>
-</nav>
-<p>ha<br><br>
-    <?php print_r($activePageArrayTop) ?>
-    <br><br>end</p>
-<!-- end nav.php -->
-

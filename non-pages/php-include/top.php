@@ -81,17 +81,33 @@
 <title><?php echo $navTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
     <?php        
         //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
-        $pageArray = array( $ROOT_DIRECTORY, "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
-        $activePageArray = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
-
-        $activePageArray = array_fill_keys($pageArray, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
+        $pageArrayTop = array( $ROOT_DIRECTORY, "portfolio", "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
+        $activePageArrayTop = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
+/*
+        $activePageArrayTop = array_fill_keys($pageArrayTop, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
         
-        for($i = 0; $i < count($pageArray); $i++){      //loop through the page array
-            if($containing_folder == $pageArray[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
-                $activePageArray[$containing_folder]= "activePage";     //print "activePage" in the $activePageArray, at the index of "containing_folder". It's associative, so $activePageArray must be accessed via a key, in this case it's the $containing_folder (or current page)
+        for($i = 0; $i < count($pageArrayTop); $i++){      //loop through the page array
+            if($containing_folder == $pageArrayTop[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
+                $activePageArrayTop[$containing_folder]= "activePage";     //print "activePage" in the $activePageArrayTop, at the index of "containing_folder". It's associative, so $activePageArrayTop must be accessed via a key, in this case it's the $containing_folder (or current page)
                 break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
             }
-        }   //at this point, $activePageArray should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
+        }   //at this point, $activePageArrayTop should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
+        */
+        
+        function fillActivePageArrays($arrayOfPages, $activeArrayToFill, $containing_folder){
+            $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
+            
+            $containing_folder2 = $containing_folder;
+            
+            for($i = 0; $i < count($arrayOfPages); $i++){      //loop through the page array
+                if($containing_folder2 == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
+                    $activeArrayToFill[$containing_folder2]= "activePage";     //print "activePage" in the $activeArrayToFill, at the index of "containing_folder". It's associative, so $activeArrayToFill must be accessed via a key, in this case it's the $containing_folder (or current page)
+                    break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
+                }
+            }   //at this point, $activeArrayToFill should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
+            return $activeArrayToFill;
+        }
+        $activePageArrayTop = fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
     ?>
 
     <link rel="icon" type="image/png" href="<?php echo $upFolderPlaceholder ?>images/0components/favicon.png">
