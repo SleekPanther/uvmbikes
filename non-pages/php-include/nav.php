@@ -12,7 +12,7 @@
                 <a href="#">Portfolio</a>
                 <input type="checkbox" id="drop-2"/>
                 <ul>
-                    <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/portfolio-1/index.php"' ; ?>>Portfolio 1</a></li>
+                    <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/portfolio_1/index.php"' ; ?>>Portfolio 1</a></li>
                     <li><a href="sub1">Portfolio 2</a></li>
                     <li>
                         <!-- Second Tier Drop Down -->
@@ -20,7 +20,7 @@
                         <a href="#">Works</a>
                         <input type="checkbox" id="drop-3"/>
                         <ul>
-                            <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/examples/example-1/index.php"' ; ?>>Example 1</a></li>
+                            <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/examples/example_1/index.php"' ; ?>>Example 1</a></li>
                             <li><a href="sub2">jQuery</a></li>
                             <li><a href="sub2">Python</a></li>
                         </ul>
