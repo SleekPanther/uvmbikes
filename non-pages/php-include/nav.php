@@ -27,6 +27,18 @@
                     </li>
                 </ul>
             </li>
+            
+            <li>
+                <!-- First Tier Drop Down -->
+                <label for="drop-4" class="toggle">Portfolio +</label>
+                <a href="#" <?php echo 'class="'.$activePageArrayTop['tests'].'"'; ?>>Tests</a>
+                <input type="checkbox" id="drop-4"/>
+                <ul>
+                    <li><a <?php echo 'href="'.$upFolderPlaceholder.'tests/t1/index.php"' . ' class="'.$activePageArrayDropDown1['t1'].'"'; ?>>T 1</a></li>
+                    <li><a href="sub1">Portfolio 2</a></li>
+                </ul>
+            </li>
+            
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'prices-services/index.php"' . ' class="'.$activePageArrayTop['prices-services'].'"'; ?>>Prices / Services</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'hours/index.php"' . ' class="'.$activePageArrayTop['hours'].'"'; ?>>Hours</a></li>
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'classes-events/index.php"' . ' class="'.$activePageArrayTop['classes-events'].'"'; ?>>Classes / Events</a></li>
