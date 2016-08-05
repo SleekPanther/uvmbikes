@@ -82,7 +82,12 @@
     <?php        
         //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
         $pageArrayTop = array( $ROOT_DIRECTORY, "portfolio", "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
+        $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples');
+        $pageArrayDropDown2 = array ('exaple_1', 'example_2', 'example_3');
         $activePageArrayTop = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
+        $activePageArrayDropDown1 = array();
+        $activePageArrayDropDown2 = array();
+
         
         //function to analyze directoy structure & create arrays for top level pages, dropdown level 1, dropdown level 2, etc. Used to print active page
         function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, &$containing_folder){  //MUST ADD & TO PASS BY VALUE
@@ -97,7 +102,10 @@
             //return $activeArrayToFill;
         }
         
+        //call the function to fill arrays
         fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
+        fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $containing_folder);
+        fillActivePageArrays($pageArrayDropDown2, $activePageArrayDropDown2, $containing_folder);
     ?>
 
     <link rel="icon" type="image/png" href="<?php echo $upFolderPlaceholder ?>images/0components/favicon.png">
