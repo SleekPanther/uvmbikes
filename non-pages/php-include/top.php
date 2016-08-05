@@ -49,13 +49,24 @@
         }
         $folderCount = count($split_url); //this gives an int. can't actually access the folder names since it's an associative array, not indexed, but still count how many indexes there are
 	$folderCountAdjusted = $folderCount - $baseLevelIndex - 1; //subtract $baseLevelIndex to get the base directory (no matter how deep the file structure, this resetets it to a base folder. Then subtract 1 to make the "home" directory be 0 folders up from anything
+        //0 means the homepage, 1 means top level pages (file is located in 1 folder below $ROOT_DIRECTORY), 2 means 2 levels down, etc.
 	
         $split_url_adjusted = $split_url;       //array to hold the URL parts AFTER the $ROOT_DIRECTORY (remove any ./ or ../ confusion)
-        for($i = 0; $i< ($folderCount - $folderCountAdjusted); $i++){   //remove the beginning indices of the array (anything before & including $ROOT_DIRETORY)
+        for($i = 0; $i< ($folderCount - $folderCountAdjusted -1); $i++){   //remove the beginning indices of the array (anything before $ROOT_DIRETORY)
             unset($split_url_adjusted[$i]);     //actually remove the element, but the indices will be messed up
         }
-        $split_url_adjusted= array_values($split_url_adjusted);     //array_values re-indexes the array . Now this contains a list of the URL parts AFTER the $ROOT_DIRECTORY
-                
+        $split_url_adjusted= array_values($split_url_adjusted);     //array_values re-indexes the array . Now this contains a list of the URL parts (folders) including & AFTER the $ROOT_DIRECTORY
+        
+        /*debugging
+        echo "<br>splitURL" . "<br>";
+        print_r($split_url);
+        echo "<br> adj" . "<br>";
+        print_r($split_url_adjusted);
+        echo "<br> folder count" . "<br>";
+        echo $folderCountAdjusted;
+        echo "<br>end" . "<br>";
+        */
+        
 	$containing_folder = $split_url[count($split_url) -1]; //IMPORTANT this gets the folder that the current file resides in. string from an array
 	$containing_folder = strtolower($containing_folder);	//convert to lowercase to avoid comparison problems
 	$fileName = $path_parts['filename'];		//
@@ -89,7 +100,7 @@
         //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
         $pageArrayTop = array( $ROOT_DIRECTORY, "portfolio", "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
         $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples');
-        $pageArrayDropDown2 = array ('exaple_1', 'example_2', 'example_3');
+        $pageArrayDropDown2 = array ('example_1', 'example_2', 'example_3');
         $activePageArrayTop = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
         $activePageArrayTop = array_fill_keys($pageArrayTop, '');
         $activePageArrayDropDown1 = array();
@@ -148,10 +159,13 @@
             $activePageArrayTop[$ROOT_DIRECTORY] = 'activePage';
         }
         if($folderCountAdjusted >= 1){
-            fillActivePageArrays($pageArrayTop, $activePageArrayTop, $split_url_adjusted, 0);
+            fillActivePageArrays($pageArrayTop, $activePageArrayTop, $split_url_adjusted, 1);
         }
         if($folderCountAdjusted >= 2){
-            fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $split_url_adjusted, 1);
+            fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $split_url_adjusted, 2);
+        }
+        if($folderCountAdjusted >= 3){
+            fillActivePageArrays($pageArrayDropDown2, $activePageArrayDropDown2, $split_url_adjusted, 3);
         }
         //fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
         //fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $containing_folder);
