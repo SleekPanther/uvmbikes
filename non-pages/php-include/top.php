@@ -57,23 +57,15 @@
         }
         $split_url_adjusted= array_values($split_url_adjusted);     //array_values re-indexes the array . Now this contains a list of the URL parts (folders) including & AFTER the $ROOT_DIRECTORY
         
-        /*debugging
-        echo "<br>splitURL" . "<br>";
-        print_r($split_url);
-        echo "<br> adj" . "<br>";
-        print_r($split_url_adjusted);
-        echo "<br> folder count" . "<br>";
-        echo $folderCountAdjusted;
-        echo "<br>end" . "<br>";
-        */
-        
 	$containing_folder = $split_url[count($split_url) -1]; //IMPORTANT this gets the folder that the current file resides in. string from an array
 	$containing_folder = strtolower($containing_folder);	//convert to lowercase to avoid comparison problems
 	$fileName = $path_parts['filename'];		//
 	
         $upFolderPlaceholderArray = array("", "../", "../../", "../../../");        //0 folders down corresponds to "", 1 folder down corresponds to ../ (so that links go to the right place
         $upFolderPlaceholder = $upFolderPlaceholderArray[ $folderCountAdjusted ];   //this is used extensively to make links in subfolders go to the right location. It checks how many folders down it is, then prints the correct number or ../ to get there
-            
+        
+//-------------------
+//remove debug from git, dont need in magic linking
         $debug = false;  //Localhost says error if not define here, hope it doesn't hurt
         if ($debug) {
             print "<p>Domain" . $domain;
@@ -98,51 +90,20 @@
 <title><?php echo $navTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
     <?php        
         //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
+        //YOU MUST LIST ALL THE PAGES ON THE SITE! But $pageArrayDropDown1 means anything that's in a 1st level dropdown, you don't have to organize them into sepatate arrays for each individual dropdown, just put pages that are the same distance down from the $ROOT_DIRECTORY in appropriate folders
         $pageArrayTop = array( $ROOT_DIRECTORY, "portfolio", "prices-services" , "hours" , "classes-events" , "contact" , "about");   //make a list of the ALL pages
-        $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples');
+        $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples', 't1', 't2');
         $pageArrayDropDown2 = array ('example_1', 'example_2', 'example_3');
         $activePageArrayTop = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
-        $activePageArrayTop = array_fill_keys($pageArrayTop, '');
+        $activePageArrayTop = array_fill_keys($pageArrayTop, '');       //fill this array with nothing so it's the same size as its _pageArray one
         $activePageArrayDropDown1 = array();
         $activePageArrayDropDown1 = array_fill_keys($pageArrayDropDown1, '');
         $activePageArrayDropDown2 = array();
         $activePageArrayDropDown2 = array_fill_keys($pageArrayDropDown2, '');
 
-        /*v1
-        //function to analyze directoy structure & create arrays for top level pages, dropdown level 1, dropdown level 2, etc. Used to print active page
-        function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, &$containing_folder){  //MUST ADD & TO PASS BY VALUE
-            $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
-            
-            for($i = 0; $i < count($arrayOfPages); $i++){      //loop through the page array
-                if($containing_folder == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
-                    $activeArrayToFill[$containing_folder]= "activePage";     //print "activePage" in the $activeArrayToFill, at the index of "containing_folder". It's associative, so $activeArrayToFill must be accessed via a key, in this case it's the $containing_folder (or current page)
-                    break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
-                }
-            }   //at this point, $activeArrayToFill should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
-            //return $activeArrayToFill;
-        }
-        */
-        
-        /*v2
-        function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, $containing_folder2 ){  //MUST ADD & TO PASS BY REFERENCE for arrays
-            $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
-            
-            for($i = 0; $i < count($arrayOfPages); $i++){      //loop through the page array
-                if($containing_folder2 == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
-                    $activeArrayToFill[$containing_folder2]= "activePage";     //print "activePage" in the $activeArrayToFill, at the index of "containing_folder". It's associative, so $activeArrayToFill must be accessed via a key, in this case it's the $containing_folder (or current page)
-                    break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
-                }
-            }   //at this point, $activeArrayToFill should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
-            //return $activeArrayToFill;
-        }
-         */
-        
         //This function analyzes a level of the folder tree & dropdown to find active pages. $folderLevelToCheck is important & must match the level of the arrays that are being passed in. For instance, to analyze $pageArrayTop (the links on the top-level nav), you must pass in 0 as the 4th argument
         function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, $split_url_adjusted2, $folderLevelToCheck){  //MUST ADD & TO PASS BY REFERENCE for arrays
-            //$activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
-            
-            $folderLevel=count($split_url_adjusted2);
-            
+            //$activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten            
             
             for($i = 0; $i < count($arrayOfPages); $i++){      //loop through the page array
                 if($split_url_adjusted2[$folderLevelToCheck] == $arrayOfPages[$i]){   //if the current containing folder (the active page) == the key stored in the page Array
@@ -150,7 +111,6 @@
                     break;      //if it finds the current page, break out of the loop, there's no point in continuing. (This hopefully helps avoid the case where 2 pages are considered "active"
                 }
             }   //at this point, $activeArrayToFill should have '' stored in all indecies EXCEPT the current page, which should have 'activePage'
-            //return $activeArrayToFill;
         }
         
         
@@ -167,9 +127,6 @@
         if($folderCountAdjusted >= 3){
             fillActivePageArrays($pageArrayDropDown2, $activePageArrayDropDown2, $split_url_adjusted, 3);
         }
-        //fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
-        //fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $containing_folder);
-        //fillActivePageArrays($pageArrayDropDown2, $activePageArrayDropDown2, $containing_folder);
     ?>
 
     <link rel="icon" type="image/png" href="<?php echo $upFolderPlaceholder ?>images/0components/favicon.png">
