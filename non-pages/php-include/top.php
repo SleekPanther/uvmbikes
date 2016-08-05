@@ -43,18 +43,22 @@
         
         $baseLevelIndex = 0;        //used to find the "base directory" in the url. If the site's home is in "topLevel/level1/level2/__" then it's 3 folders down, so everything should relae the the url array from index 2
         for ($i = 0; $i < count($split_url); $i++){     //loop through the URL
-            if ($split_url[$i] == $ROOT_DIRECTORY){       //SUPER IMPORTANT (change this to match the BASE folder that the site lives inside)
+            if ($split_url[$i] == $ROOT_DIRECTORY){     //SUPER IMPORTANT ($ROOT_DIRECTORY must match the BASE folder that the site lives inside)
                 $baseLevelIndex = $i;
             }
         }
         $folderCount = count($split_url); //this gives an int. can't actually access the folder names since it's an associative array, not indexed, but still count how many indexes there are
 	$folderCountAdjusted = $folderCount - $baseLevelIndex - 1; //subtract $baseLevelIndex to get the base directory (no matter how deep the file structure, this resetets it to a base folder. Then subtract 1 to make the "home" directory be 0 folders up from anything
 	
-        $split_url_adjusted = array();
+        $split_url_adjusted = $split_url;
+//        for($i = ($folderCount - $folderCountAdjusted); $i<$folderCountAdjusted; $i++){
+//            $split_url_adjusted[$adjIndex++] = $split_url[$i];
+//        }
         for($i = ($folderCount - $folderCountAdjusted); $i<$folderCountAdjusted; $i++){
             $split_url_adjusted[$adjIndex++] = $split_url[$i];
         }
-        print_r($split_url) . " split url adj";
+        //echo "haha "  . " split url " . $split_url[1] . print_r($split_url);
+        //echo "yoyo " . "adj = " . print_r($split_url_adjusted);
         
 	$containing_folder = $split_url[count($split_url) -1]; //IMPORTANT this gets the folder that the current file resides in. string from an array
 	$containing_folder = strtolower($containing_folder);	//convert to lowercase to avoid comparison problems
