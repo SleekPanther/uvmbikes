@@ -50,16 +50,12 @@
         $folderCount = count($split_url); //this gives an int. can't actually access the folder names since it's an associative array, not indexed, but still count how many indexes there are
 	$folderCountAdjusted = $folderCount - $baseLevelIndex - 1; //subtract $baseLevelIndex to get the base directory (no matter how deep the file structure, this resetets it to a base folder. Then subtract 1 to make the "home" directory be 0 folders up from anything
 	
-        $split_url_adjusted = $split_url;
-//        for($i = ($folderCount - $folderCountAdjusted); $i<$folderCountAdjusted; $i++){
-//            $split_url_adjusted[$adjIndex++] = $split_url[$i];
-//        }
-        for($i = ($folderCount - $folderCountAdjusted); $i<$folderCountAdjusted; $i++){
-            $split_url_adjusted[$adjIndex++] = $split_url[$i];
+        $split_url_adjusted = $split_url;       //array to hold the URL parts AFTER the $ROOT_DIRECTORY (remove any ./ or ../ confusion)
+        for($i = 0; $i< ($folderCount - $folderCountAdjusted); $i++){   //remove the beginning indices of the array (anything before & including $ROOT_DIRETORY)
+            unset($split_url_adjusted[$i]);     //actually remove the element, but the indices will be messed up
         }
-        //echo "haha "  . " split url " . $split_url[1] . print_r($split_url);
-        //echo "yoyo " . "adj = " . print_r($split_url_adjusted);
-        
+        $split_url_adjusted= array_values($split_url_adjusted);     //array_values re-indexes the array . Now this contains a list of the URL parts AFTER the $ROOT_DIRECTORY
+                
 	$containing_folder = $split_url[count($split_url) -1]; //IMPORTANT this gets the folder that the current file resides in. string from an array
 	$containing_folder = strtolower($containing_folder);	//convert to lowercase to avoid comparison problems
 	$fileName = $path_parts['filename'];		//

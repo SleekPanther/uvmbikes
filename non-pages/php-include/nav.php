@@ -47,11 +47,6 @@
     <?php
         echo " split url " .  print_r($split_url). "<br>";
         echo "adj  " . print_r($split_url_adjusted). "<br> <br>";
-        
-        unset($split_url_adjusted[0]);
-        
-        echo "split url " .  print_r($split_url). "<br>";
-        echo "adj  " . print_r($split_url_adjusted). "<br>";
     ?>
 </p>
 <!-- end nav.php -->
