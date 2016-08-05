@@ -9,10 +9,10 @@
             <li>
                 <!-- First Tier Drop Down -->
                 <label for="drop-2" class="toggle">Portfolio +</label>
-                <a href="#">Portfolio</a>
+                <a <?php echo 'href="#"' . ' class="'.$activePageArrayTop['portfolio'].'"'; ?>>Portfolio</a>
                 <input type="checkbox" id="drop-2"/>
                 <ul>
-                    <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/portfolio_1/index.php"' . ' class="'.$activePageArrayDropDown1['portfolio_1'].'"'; ?>>Portfolio 1</a></li>
+                    <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/portfolio_1/index.php"' . ' class=""'; ?>>Portfolio 1</a></li>
                     <li><a href="sub1">Portfolio 2</a></li>
                     <li>
                         <!-- Second Tier Drop Down -->
