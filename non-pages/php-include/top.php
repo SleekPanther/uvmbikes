@@ -91,8 +91,11 @@
         $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples');
         $pageArrayDropDown2 = array ('exaple_1', 'example_2', 'example_3');
         $activePageArrayTop = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
+        $activePageArrayTop = array_fill_keys($pageArrayTop, '');
         $activePageArrayDropDown1 = array();
+        $activePageArrayDropDown1 = array_fill_keys($pageArrayDropDown1, '');
         $activePageArrayDropDown2 = array();
+        $activePageArrayDropDown2 = array_fill_keys($pageArrayDropDown2, '');
 
         /*v1
         //function to analyze directoy structure & create arrays for top level pages, dropdown level 1, dropdown level 2, etc. Used to print active page
@@ -125,7 +128,7 @@
         
         //This function analyzes a level of the folder tree & dropdown to find active pages. $folderLevelToCheck is important & must match the level of the arrays that are being passed in. For instance, to analyze $pageArrayTop (the links on the top-level nav), you must pass in 0 as the 4th argument
         function fillActivePageArrays(&$arrayOfPages, &$activeArrayToFill, $split_url_adjusted2, $folderLevelToCheck){  //MUST ADD & TO PASS BY REFERENCE for arrays
-            $activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
+            //$activeArrayToFill = array_fill_keys($arrayOfPages, '');        //need to fill the array with something so it exists. Start with blank, but works with any character. Just as long as the array has a key, it will be have a space to be overwritten
             
             $folderLevel=count($split_url_adjusted2);
             
@@ -141,7 +144,15 @@
         
         
         //call the function to fill arrays
-        fillActivePageArrays($pageArrayTop, $activePageArrayTop, $split_url_adjusted, 0);
+        if($folderCountAdjusted == 0){
+            $activePageArrayTop[$ROOT_DIRECTORY] = 'activePage';
+        }
+        if($folderCountAdjusted >= 1){
+            fillActivePageArrays($pageArrayTop, $activePageArrayTop, $split_url_adjusted, 0);
+        }
+        if($folderCountAdjusted >= 2){
+            fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $split_url_adjusted, 1);
+        }
         //fillActivePageArrays($pageArrayTop, $activePageArrayTop, $containing_folder);
         //fillActivePageArrays($pageArrayDropDown1, $activePageArrayDropDown1, $containing_folder);
         //fillActivePageArrays($pageArrayDropDown2, $activePageArrayDropDown2, $containing_folder);
