@@ -60,11 +60,13 @@
 	$fileName = $path_parts['filename'];		//not used much, but just in case
         $dirName = $path_parts['dirname'];              //the whole url (excluding filename). Not used much
 	
-        $upFolderPlaceholderArray = array("", "../", "../../", "../../../");        //0 folders down corresponds to "", 1 folder down corresponds to ../ (so that links go to the right place
-        $upFolderPlaceholder = $upFolderPlaceholderArray[ $folderCountAdjusted ];   //this is used extensively to make links in subfolders go to the right location. It checks how many folders down it is, then prints the correct number or ../ to get there
+        $cdUpRefArray = array("", "../", "../../", "../../../", "../../../../");        //"Change Directories Up Reference Array" hold string value of what to type to navigate up a directory. 0 folders down corresponds to the 0th index or "", 1 folder down corresponds to the 1st index or "../" (so that links go to the right place)
+        $upFolderPlaceholder = $cdUpRefArray[ $folderCountAdjusted ];   //this is used extensively to make links in subfolders go to the right location. It checks how many folders down it is, then prints the correct number or ../ to get back to the $ROOT_DIRECTORY before going down any more directories
+        //end path setup
+        // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
         
-//-------------------
-//remove debug from git, dont need in magic linking
+        
+        //Debugging section, ignore if not needed
         $debug = false;  //Localhost says error if not define here, hope it doesn't hurt
         if ($debug) {
             print "<p>Domain" . $domain;
@@ -72,10 +74,11 @@
             print "<p>Path Parts<pre>";
             print_r($path_parts);
             print "</pre>";
-        }        
+        }
+        //end debugging
         
         
-        //This sets the title tag based on the current page (and the folder it's located inside)
+        //This is basiaclly the "Page Name". Can easily be added to all <title> tags & printed as the 1st <h1> on pages. ALL BASED ON CONTAINING FOLDER
         $navTitle = $containing_folder;                     //initially set to the entire fontaining folder
         $navTitle = str_replace("-" , " / ", $navTitle);    //replace dashes with slashes and spaces
         $navTitle = str_replace("_" , " ", $navTitle);      //replace underscores with spaces (multi-word title)
