@@ -57,6 +57,9 @@
         $split_url_adjusted= array_values($split_url_adjusted);     //array_values re-indexes the array. Now this contains a list folderis in the the URL including & AFTER the $ROOT_DIRECTORY
         
         $containing_folder = strtolower( $split_url_adjusted[count($split_url_adjusted) -1] ); //IMPORTANT this gets the very last folder in the $split_url_adjusted array (the very last index of an array is 1 less than its size, hence: count($split_url_adjusted) -1 ). This folder "contains" the current page file. Used almost everywhere to tell what page I'm on since all my pages are called 'index.php' but have unique cotaining-folder names. & finally CONVERT TO LOWERCAASE to avoid comparison problems later on
+        if($folderCountAdjusted == 0){      //special case for the homepage. Since its actual containing folder is the contents of $ROOT_DIRECTORY, it must be overridden to equal "index". This is to avoid confusion if $ROOT_DIRECTOY is NOT a a good name for the site. This disregards where the site is located & just make the homepage's containing folder = "index". ALSO USED TO PRINT ID'S IN THE BODY TAG FOR EACH PAGE
+            $containing_folder = 'index';
+        }
 	$fileName = $path_parts['filename'];		//not used much, but just in case
         $dirName = $path_parts['dirname'];              //the whole url (excluding filename). Not used much
 	
@@ -79,17 +82,17 @@
         
         
         //This is basiaclly the "Page Name". Can easily be added to all <title> tags & printed as the 1st <h1> on pages. ALL BASED ON CONTAINING FOLDER
-        $navTitle = $containing_folder;                     //initially set to the entire fontaining folder
-        $navTitle = str_replace("-" , " / ", $navTitle);    //replace dashes with slashes and spaces
-        $navTitle = str_replace("_" , " ", $navTitle);      //replace underscores with spaces (multi-word title)
-        $navTitle = ucwords($navTitle);                     //capitolize 1st letter of each word
+        $pageTitle = $containing_folder;                     //initially set to the entire fontaining folder
+        $pageTitle = str_replace("-" , " / ", $pageTitle);    //replace dashes with slashes and spaces
+        $pageTitle = str_replace("_" , " ", $pageTitle);      //replace underscores with spaces (multi-word title)
+        $pageTitle = ucwords($pageTitle);                     //capitolize 1st letter of each word
         if ($folderCountAdjusted == 0) {    //if it's the homepage, hardcode it instead of the base folder where the site's located
-            $navTitle = "Home";
+            $pageTitle = "Home";
         }
         
-        $tagLine = " - UVM Bikes - Free Campus Bike Shop";
+        $tagLine = " - UVM Bikes - Free Campus Bike Shop";  //Change this to match the tagline/slogan of your site. This will appear @ the end of every title page. Like the " - Wikipedia, the free encyclopedia" at the end of every Wikipedia Page
         ?>
-<title><?php echo $navTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
+<title><?php echo $pageTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
     <?php        
         //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
         //YOU MUST LIST ALL THE PAGES ON THE SITE! But $pageArrayDropDown1 means anything that's in a 1st level dropdown, you don't have to organize them into sepatate arrays for each individual dropdown, just put pages that are the same distance down from the $ROOT_DIRECTORY in appropriate folders
@@ -144,12 +147,7 @@
     </head>
     <!-- ################ body section ######################### -->
     <?php
-        if ($folderCountAdjusted == 0){
-            echo '<body id="index">';
-        }
-        else{
-            echo '<body id="'.$containing_folder.'">';
-        }
+        echo '<body id="'.$containing_folder.'">';
     ?>
     <p class="skipToContent"><a href="#actualMainContent">Skip to Main Content</a></p><!-- accessibility skip button, positioned off screen -->
     <?php

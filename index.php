@@ -1,6 +1,6 @@
 <?php include("non-pages/php-include/top.php"); ?><!-- MUST MANUALLY LINK TO top.php & USING ../ but use $upFolderPlaceHolder from now on -->
     <div class="widthContainer">
-        <article><h1 class="cent"><?php echo $navTitle; ?> - UVM Bikes</h1></article>
+        <article><h1 class="cent"><?php echo $pageTitle; ?> - UVM Bikes</h1></article>
     </div>
     <div class="widthContainer">
         <div class="colContainer">
