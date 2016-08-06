@@ -1,15 +1,15 @@
 <!-- nav.php -->
 <nav>
-    <div id="logo"><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"'; ?>><img src="<?php echo $upFolderPlaceholder;?>images/logo/logo.png" alt="UVM Bikes"><span class="logoLink">Free Campus<br>Bike Shop</span></a></div>
+    <div id="logo"><a href="<?php echo $upFolderPlaceholder ?>index.php"><img src="<?php echo $upFolderPlaceholder;?>images/logo/logo.png" alt="UVM Bikes"><span class="logoLink">Free Campus<br>Bike Shop</span></a></div>
         <label for="drop" class="toggle">Show/Hide Menu</label>
         <input type="checkbox" id="drop" />
         <ul class="menu">
-            <!-- IMPORTANT $containing_folder == $ROOT_DIRECTORY is different from all other links since it has a special parent folder. (or we don't know what the server's parent folder will be. So this must be the ver base case for comparison. -->
+            <!-- IMPORTANT! Homepage is special since its $containing folder doesn't have to be called "index" or "home". Use the fact that $ROOT_DIRECTORY is already been analyzed in top.php, hence $activePageArrayTop[$ROOT_DIRECTORY] -->
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'index.php"' . ' class="'.$activePageArrayTop[$ROOT_DIRECTORY].'"'; ?>>Home</a></li>
             <li>
                 <!-- First Tier Drop Down -->
                 <label for="drop-2" class="toggle">Portfolio +</label>
-                <a href="#" <?php echo 'class="'.$activePageArrayTop['portfolio'].'"'; ?>>Portfolio</a>
+                <a href="#" <?php echo 'class="'.$activePageArrayTop['portfolio'].'"'; ?>>Portfolio</a><!-- dropdown pages have href="#" to stay on same page when clicked -->
                 <input type="checkbox" id="drop-2"/>
                 <ul>
                     <li><a <?php echo 'href="'.$upFolderPlaceholder.'portfolio/portfolio_1/index.php"' . ' class="'.$activePageArrayDropDown1['portfolio_1'].'"'; ?>>Portfolio 1</a></li>
@@ -46,20 +46,5 @@
             <li><a <?php echo 'href="'.$upFolderPlaceholder.'about/index.php"' . ' class="'.$activePageArrayTop['about'].'"'; ?>>About</a></li>
         </ul>
 </nav>
-<p>top level pages<br>
-    <?php print_r($activePageArrayTop) ?>
-    <br><br>drop1
-    <?php print_r($activePageArrayDropDown1) ?>
-    <br><br>drop 2
-    <?php print_r($activePageArrayDropDown2) ?>
-    
-    <br><br>end
-    
-    <br><br>
-    <?php
-        echo " split url " .  print_r($split_url). "<br>";
-        echo "adj  " . print_r($split_url_adjusted). "<br> <br>";
-    ?>
-</p>
 <!-- end nav.php -->
 

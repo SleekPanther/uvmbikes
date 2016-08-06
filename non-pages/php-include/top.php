@@ -140,7 +140,7 @@
     <script src="<?php echo $upFolderPlaceholder ?>non-pages/galleria/galleria-1.4.2.min.js"></script>    <!-- these 2 scripts go before the galleria div & actually running goes AFTER -->
     
     </head>
-    <!-- ################ body section ######################### -->
+    <!-- ################ begin body section ######################### -->
     <?php
         echo '<body id="'.$containing_folder.'">';
     ?>
