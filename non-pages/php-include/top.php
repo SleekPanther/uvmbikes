@@ -92,18 +92,15 @@
         
         $tagLine = " - UVM Bikes - Free Campus Bike Shop";  //Change this to match the tagline/slogan of your site. This will appear @ the end of every title page. Like the " - Wikipedia, the free encyclopedia" at the end of every Wikipedia Page
         ?>
-<title><?php echo $pageTitle.$tagLine ; ?></title><!-- print the title based on concatenating the current page title, & global site tagline/slogan -->
+<title><?php echo $pageTitle.$tagLine ; ?></title><!-- print the title by concatenating the current page title, & global site tagline/slogan -->
     <?php        
-        //IMPORTANT the 1st item (home page) $ROOT_DIRECTORY is the root directory
-        //YOU MUST LIST ALL THE PAGES ON THE SITE! But $pageArrayDropDown1 means anything that's in a 1st level dropdown, you don't have to organize them into sepatate arrays for each individual dropdown, just put pages that are the same distance down from the $ROOT_DIRECTORY in appropriate folders
+        //YOU MUST LIST ALL THE PAGES ON THE SITE! But $pageArrayDropDown1 means anything that's in a 1st level dropdown, you don't have to organize them into sepatate arrays for each individual dropdown, just put pages that are the same distance down from the $ROOT_DIRECTORY in appropriate folders.
+        //THIS ALSO MEANS PUT $ROOT_DIRECTORY IN $pageArrayTop EVEN THOUGH IT'S NOT 1-LEVEL DOWN FROM ITSELF, IT'S ON THE SAME LEVEL OF THE NAV
         $pageArrayTop = array( $ROOT_DIRECTORY, "portfolio", "prices-services" , "hours" , "classes-events" , "contact" , "about", 'tests');   //make a list of the ALL pages
-        $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples', 't1', 't2');
+        $pageArrayDropDown1 = array ('portfolio_1', 'portfolio_2', 'examples', 't1', 't2');     //1st level of dropdown
         $pageArrayDropDown2 = array ('example_1', 'example_2', 'example_3');
-        $activePageArrayTop = array();     //initialize associative array to hold the page name & the text "activePage" (a css class for the current page)
-        $activePageArrayTop = array_fill_keys($pageArrayTop, '');       //fill this array with nothing so it's the same size as its _pageArray one
-        $activePageArrayDropDown1 = array();
+        $activePageArrayTop = array_fill_keys($pageArrayTop, '');       //initialize associative array to hold the page name & the text "activePage" (a css class for the current page). Fill this array with nothing so it's the same size as its _pageArray one
         $activePageArrayDropDown1 = array_fill_keys($pageArrayDropDown1, '');
-        $activePageArrayDropDown2 = array();
         $activePageArrayDropDown2 = array_fill_keys($pageArrayDropDown2, '');
 
         //This function analyzes a level of the folder tree & dropdown to find active pages. $folderLevelToCheck is important & must match the level of the arrays that are being passed in. For instance, to analyze $pageArrayTop (the links on the top-level nav), you must pass in 0 as the 4th argument
