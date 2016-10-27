@@ -11,7 +11,7 @@
         
         <?php
 //=============IMPORTANT variable $ROOT_DIRECTORY must be where the project is housed (where the homepage is). ==========================
-        $ROOT_DIRECTORY = "assignment7";        //MUST CHANGE THIS OR THE ENTIRE PROJECT WON'T WORK!
+        $ROOT_DIRECTORY = "uvmbikes";        //MUST CHANGE THIS OR THE ENTIRE PROJECT WON'T WORK!
         
         //======Magical code to display errors========\\
         //======COMMENT OUT WHEN YOU'RE FINISHED TESTING========\\
