@@ -21,4 +21,4 @@ The images are all in the same folder `images/slideshow/1homepage/` and named `i
 This means I can add or subtract images to the folder and won't need to update the html. (As long as the images are named correctly)
 
 ## Known Bugs
--The Galleria slideshow occasionaly doesn't work. It has a height specified in CSS, but sometimes it thinks the containing box is 0px tall & won't load. I added an empty paragraph with "&nbsp;" before the galleria div to fix this & it seems to work.
+- The Galleria slideshow occasionaly doesn't work. It has a height specified in CSS, but sometimes it thinks the containing box is 0px tall & won't load. I added an empty paragraph with "&nbsp;" before the galleria div to fix this & it seems to work.
