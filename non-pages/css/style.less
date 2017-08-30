@@ -7,91 +7,91 @@
 //mixin & extends classes for LESS
 @thinBlackBorder: 1px solid black;;
 .thinBlackBorderAll{    /*border for boxes, 4 sides */
-    border: @thinBlackBorder;
+	border: @thinBlackBorder;
 }
 .smallLeftIndent{
-    text-indent: 1em;
+	text-indent: 1em;
 }
 .sans-serif{
-    font-family: arial, sans-serif;
+	font-family: arial, sans-serif;
 }
 .serif{
-    font-family: 'times new roman', serif;
+	font-family: 'times new roman', serif;
 }
 
 /*------------------------- general syles & global positioning ---------------------- */
 body {
-    margin: 0;
-    font-size: 1.3em;
-    background: @contentBackground;
-    &:extend(.serif);
-    //background: @footerBackground;
+	margin: 0;
+	font-size: 1.3em;
+	background: @contentBackground;
+	&:extend(.serif);
+	//background: @footerBackground;
 }
 
 /*------------------------------------ Link Styles ------------------------------------*/
 a:hover, a:focus{       /*some link styles for hover & focus*/
-    text-decoration: none;
+	text-decoration: none;
 }
 a[href^="http"]:after {  /*target the external links. Could also have done a[target="_blank"]{} */
-    content: " \2197";
+	content: " \2197";
 }
 /*------------------------------------ End Link Styles --------------------------------*/
 
-/*classes to easily add bold or italic */
+/*--------------------classes to easily add bold or italic --------------------*/
 .b{
-    font-weight: bold;
+	font-weight: bold;
 }
 .i{
-    font-style: italic;
+	font-style: italic;
 }
 .cent{      /*shorthand class to center text */
-    text-align: center;
+	text-align: center;
 }
 .skipToContent{     /*hides something from sighted users. Position absolute removes from flow, negative left sends way off screen, top:auto=just in case left is ignored, sometimes need both */
-    position:absolute;
-    left:-10000px;
-    top:auto;
+	position:absolute;
+	left:-10000px;
+	top:auto;
 }
 
 // http://stackoverflow.com/questions/24123195/less-css-nested-loops-for-header-elements
 .headers-generator(@n; @i : 1) when (@i =< @n)
 {
-    h@{i} {
-        font-size: (1.8em - (@i - 1) * 0.2);    //biggest heading=1.8em, the starting point
-        margin: .6em 0 0 0;         /* remove default margin for heading & make it much smaller */
-        &:extend(.b);     /* make sure all heading are bold, if the browser doesn't do so automatically */
-        &:extend(.sans-serif);
-    }
-    .headers-generator(@n; (@i + 1));
+	h@{i} {
+		font-size: (1.8em - (@i - 1) * 0.2);    //biggest heading=1.8em, the starting point
+		margin: .6em 0 0 0;         /* remove default margin for heading & make it much smaller */
+		&:extend(.b);     /* make sure all heading are bold, if the browser doesn't do so automatically */
+		&:extend(.sans-serif);
+	}
+	.headers-generator(@n; (@i + 1));
 }
 .headers-generator(6);
 h1{                 /*no bottom margin on h1's since they's only used for page titles & have a bottom border */
-    margin: 0;
+	margin: 0;
 }
 
 .widthContainer article h1:first-child {    /*put a border on the 1st h1 on each page, (the page name)) */
-    border-bottom: @thinBlackBorder;
-    .cent;
+	border-bottom: @thinBlackBorder;
+	.cent;
 }
 
 
 header {    /*IMPORTANT = makes galleria hide behind the menu dropdowns*/
-    z-index: 2;
+	z-index: 2;
 }
 
 //h1, h2, h3,h4,h5,h6
 ul, ol {
-    margin: 0;
+	margin: 0;
 }
 main ul li{         /* put some space between list items, but only those in the actual content section (contained in <main>) */
-    margin: .8em 0;
+	margin: .8em 0;
 }
 p{
-    margin: 0 0 .7em 0;
+	margin: 0 0 .7em 0;
 }
 
 /*All horizontal sections get some class or id like ".slideshow" or an actual section like "<main>". Background color is set here.
-    all <main> elements start in header.php & have id="actualMainContent" for accessibility "skip to main content" link
+	all <main> elements start in header.php & have id="actualMainContent" for accessibility "skip to main content" link
 Inside that, they need a div with class "widthContainer". This allows content to be partial width, but the background to go full width.
 For columns, there's a div with class "colContainer" (to make sure elements don't float outside). An important thing is to have this clear: both
 colContainer is like a row, & inside 2 divs get classes "twoCol". They float left on big screens then span the entire width on small screens
@@ -103,191 +103,197 @@ The class "subSec" gives some extra padding for multiple sections in 1 column. R
 
 /* width & positioning classes */
 .twoCol {   /*using a min-width approach it starts off 100% & is changed later */
-    width: 100%;
+	width: 100%;
 }
 .widthContainer {
-    width: 100%;        /* width is changed later for large screens */
-    margin: 0 auto;     /*center it in the page */
+	width: 100%;        /* width is changed later for large screens */
+	margin: 0 auto;     /*center it in the page */
 
-    transition: 1.5s;   /*transition the width to 100% later on */
+	transition: 1.5s;   /*transition the width to 100% later on */
 
-    article {
-        padding: .5em;
-        clear: both;        /* this targets  all articles, but only affects those that follow a colContainer & makes them start on a new line (just in case there's only 1 twoCOl on the left & it leaves floating space on the right). */
-    }
+	article {
+		padding: .5em;
+		clear: both;        /* this targets  all articles, but only affects those that follow a colContainer & makes them start on a new line (just in case there's only 1 twoCOl on the left & it leaves floating space on the right). */
+	}
 }
 .subSec{    /*give some extra room on the top of sub sections in the same article */
-    margin: 2em 0 0 0;  /*Really only is needed for the 2nd article in a column */
+	margin: 2em 0 0 0;  /*Really only is needed for the 2nd article in a column */
 }
 
 /*media queries on small screen to fix columns & mkae full width */
 @media (min-width: 800px){ /* these are actually what you see most of the time on big screens */
-    .twoCol {
-        width: 50%;
-        float: left;     /* both float left so 2 columns end up on one row */
-    }
-    .widthContainer {   /*take up 70% on large screens */
-        width:70%;
-    }
+	.twoCol {
+		width: 50%;
+		float: left;     /* both float left so 2 columns end up on one row */
+	}
+	.widthContainer {   /*take up 70% on large screens */
+		width:70%;
+	}
 }
 
 .todayHours, .tinyLocation{    /*style for small screens: no float, so they don't overlap. (changed later) */
-    float:none;
+	float:none;
 }
 .todayHours {
-    a {
-        text-shadow: 0px 0px 1px black; /*give a slight shadow around text */
-    }
-    .todayHoursActualContent{   /*add some styles to the header hours, so they're differentiated for 'Hours Today: __' */
-        &:extend(.b);//       //.b;      //maybe just do mixin
-        border-radius: 1em;
-        padding: 0 .7em;
-        background: white;
-    }
+	a {
+		text-shadow: 0px 0px 1px black; /*give a slight shadow around text */
+	}
+	.todayHoursActualContent{   /*add some styles to the header hours, so they're differentiated for 'Hours Today: __' */
+		&:extend(.b);//       //.b;      //maybe just do mixin
+		border-radius: 1em;
+		padding: 0 .7em;
+		background: white;
+	}
 }
 @media (min-width: 1000px){ /* these are actually what you see on big screens */
-    .todayHours{
-        float:left;
-    }
-    .tinyLocation{
-        float:right;
-    }
+	.todayHours{
+		float:left;
+	}
+	.tinyLocation{
+		float:right;
+	}
 }
 
 main, footer, .headerInfo article {  /* THIS IS MAGIC. Since twoCol & most elements are floated, their parent take up no height. This forces the parent to contain children. Needs to be applied to the direct parent of any ALL-FLOATED-ELEMEENt sections*/
-    overflow: auto;   /* hidden or auto both seem to work */
+	overflow: auto;   /* hidden or auto both seem to work */
 }
 .colContainer{
-    clear:both; /* this is important, so that multiple columns don't all go to the right */
+	clear:both; /* this is important, so that multiple columns don't all go to the right */
 }
 /*------------------------- end positioning/layout section -------------------------*/
 
 /*-------------------------color of page secions ---------------------------------*/
 .headerInfo {
-    background: @headerInfoBackground;
+	background: @headerInfoBackground;
 }
 .galleria{
-    height: 350px;  /*galleria mus have a px height, % doesn't work */
+	height: 350px;  /*galleria mus have a px height, % doesn't work */
 }
 .galleriaHackP{ /*weird hack to fix galleria not loading*/
-    //font-size: 1px;
+	//font-size: 1px;
 }
 .galleria-theme-classic { /*change stage background color */
-    background: @slideshowBackground;
+	background: @slideshowBackground;
 }
 .slideshow{
-    background: @slideshowBackground;
+	background: @slideshowBackground;
 }
 main{
-    background: @contentBackground;
+	background: @contentBackground;
 }
 footer {
-    background: @footerBackground;
-    font-size: .8em;    /*make the footer font a little smaller */
+	background: @footerBackground;
+	font-size: .8em;    /*make the footer font a little smaller */
 }
 /*-------------------------END "color of page" secions -----------------------------*/
 
 /*----------------------------Images sizing --------------------------------------------*/
 img {       /* make images take up fil width of their figcontainers */
-    width: 100%;    /*height is still auto so aspect ratio is preserved as long as the figaption has a set width*/
+	width: 100%;    /*height is still auto so aspect ratio is preserved as long as the figaption has a set width*/
 }
 #logo{  
-    img{    /*overrides 100% width for images in the logo nav */
-        width: auto;
-    }
+	img{    /*overrides 100% width for images in the logo nav */
+		width: auto;
+	}
 }
 /* set the width of the img containter (the figure individually). Try to keep to a camelCase naming convention of "img" prefix, then a descriptive name of the picture like "Donate" for 'donating bikes', then a dash & the page name "-prices" LOWERCASW HERE !!! */
 figure{
-    margin: 0;  /*remove browser defaults */
-    &#imgDonate-prices{
-        width: 50%;
-    }
-    &.imgFB-link{
-        display: inline-block;
-        width: 80px;
-        & a[href^="http"]:after{    
-            content: "";            /*remove the ascii arrow for external links */
-        }
-    }
+	margin: 0;  /*remove browser defaults */
+	&#imgDonate-prices{
+		width: 50%;
+	}
+	&.imgFB-link{
+		display: inline-block;
+		width: 80px;
+		& a[href^="http"]:after{    
+			content: "";            /*remove the ascii arrow for external links */
+		}
+	}
 }
 /*--------------------------------EndImages sizing -------------------------------------*/
 
 /* ----------------------- Iframes (maps & calendars) ---------------------------------- */
 iframe {
-    border: 0;
-    display: block;
-    margin: 0 0 1em 0;  /* give some margin on the bottom, but remove everywhere else */
-    /*some specific sizing for the different iframes */
-    &.map{
-        width:100%;
-        height: 20em;
-    }
-    &.volunteerCalendar{
-        height: 30em;
-        width: 100%;
-    }
+	border: 0;
+	display: block;
+	margin: 0 0 1em 0;  /* give some margin on the bottom, but remove everywhere else */
+	/*some specific sizing for the different iframes */
+	&.map{
+		width:100%;
+		height: 20em;
+	}
+	&.volunteerCalendar{
+		height: 30em;
+		width: 100%;
+	}
 }
 /* ---------------------------- end Iframes ---------------------------------- */
 
 /* -------------------------- General Table styles -----------------------------*/
 table {
-    border-collapse: collapse;
-    width: 100%;        /* this makes it take up the width of the container */
+	border-collapse: collapse;
+	width: 100%;        /* this makes it take up the width of the container */
 }
 th,td { /*give cells a border & some padding */
-    .thinBlackBorderAll;   
-    padding: .2em 0;        /*make cells a little taller by giving some head room, but none left/right */
+	.thinBlackBorderAll;   
+	padding: .2em 0;        /*make cells a little taller by giving some head room, but none left/right */
 }
 th{     /*make sure table headers are centered */
-    text-align: center;
+	text-align: center;
 }
 /*--------------------------- end table style ---------------------------------*/
 
 /*------------------------------- Prices/Services page ----------------------------------------*/
 #prices-services{
-    td, th{
-        width: 50%;
-        padding-left: .5em;     /*add some more padding on the left on the prices table */
-    }
-    th{
-        border:0;   /* remove border on most table headers */
-        padding-top: 1em;
-    }
-    table tr:nth-child(1) th, table tr:nth-child(2) th {    /*give border for the 1st 2 rows */
-        .thinBlackBorderAll;
-    }
-    
-    tr:hover{
-        background: white;
-    }
+	td, th{
+		width: 50%;
+		padding-left: .5em;     /*add some more padding on the left on the prices table */
+	}
+	th{
+		border:0;   /* remove border on most table headers */
+		padding-top: 1em;
+	}
+	table tr:nth-child(1) th, table tr:nth-child(2) th {    /*give border for the 1st 2 rows */
+		.thinBlackBorderAll;
+	}
+	
+	tr:hover{
+		background: white;
+	}
 }
 /*------------------------------- End /Services page ----------------------------------------*/
 /* ------------------------------- Hours --------------------------------------*/
 #hours {
-    th,td {     /*make all cells cented on the hours page */
-        text-align: center;
-    }
+	th,td {     /*make all cells cented on the hours page */
+		text-align: center;
+	}
 }
 .currentDayHoursTable{      /*give a highlight background to the current day in the table */
-    background: @headerInfoBackground;      /*color matches the headerInfo color */
+	background: @headerInfoBackground;      /*color matches the headerInfo color */
 }
 /* -------------------------------- end Hours --------------------------------------*/
 
 /*-------------------------------Contact page ----------------------------------------*/
 .contactLink{
-    .smallLeftIndent;
+	.smallLeftIndent;
 }
 .facebookFoot{
-    div.fbLabel{    /*give some padding to FaceBook Label "Like us on Facebook" next to the embedded iframe */
-        float: left;
-        margin-right: 1em;
-    }
+	div.fbLabel{    /*give some padding to FaceBook Label "Like us on Facebook" next to the embedded iframe */
+		float: left;
+		margin-right: 1em;
+	}
 }
 
 .fbPageEmbedContainer{      /*this is the container for the facebook embed, must have a pixel width */
    width: 300px;
 }
 /*----------------------------------END contact page -------------------------------------*/
-/*------------------------------- page ----------------------------------------*/
 
-/*----------------------------------END  page -------------------------------------*/
+/*---------------- Extra ----------------------------------*/
+.outdated-warning-banner{
+	text-align: center;
+	background: red;
+	padding: 1em;
+	.b;
+}
+/*---------------- END Extra ----------------------------------*/
